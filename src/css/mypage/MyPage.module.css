@@ -1,0 +1,337 @@
+.mypage_header {
+    width: 100%;
+    height: 96px;
+    background: #ECECEC;
+    padding-right: 43px;
+}
+
+.profile_section,
+.none_profile_section,
+.none_profile_section_info {
+    height: 217px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.none_profile_section_info>div {
+    width: 71px;
+    height: 71px;
+    background-color: #B0BEC5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 8px 0;
+}
+
+.profile_section>div,
+.none_profile_section>div {
+    width: 71px;
+    height: 71px;
+    background-color: #B0BEC5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 18px 0;
+}
+
+.my_name {
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.my_id_info {
+    color: #A2A2A2;
+
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.profile_section>button,
+.none_profile_section>button,
+.none_profile_section_info>button {
+    display: flex;
+    height: 35px;
+    width: 120px;
+    padding: 6px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #A2A2A2;
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: #FCFCFC;
+    margin: 19px 20px;
+}
+
+.profile_section>button,
+.none_profile_section>button {
+    margin: 19px 20px;
+
+}
+
+.none_profile_section_info>button {
+    margin: 8px 20px;
+}
+
+.web {
+    display: none !important;
+}
+
+.gray_div {
+    width: 100%;
+    height: 14px;
+    background: #D9D9D9;
+}
+
+.my_class_info_header {
+    height: 65px;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ECECEC;
+
+}
+
+.my_classes {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.mypage_header>div {
+    padding-top: 55px;
+    display: flex;
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.mypage_header>div>button {
+    display: flex;
+    width: 33px;
+    height: 33px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    background-color: #ECECEC;
+    margin-left: 10px;
+}
+
+.mypage_header>div>p {
+    margin: auto;
+}
+
+.my_id {
+    display: none;
+}
+
+
+.my_classes_web {
+    display: none;
+}
+
+.detail_section {
+    margin: 4px 19px 0 19px;
+
+}
+
+.detail_section>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.detail_section>div:last-of-type {
+    border-top: 1px solid #D9D9D9;
+}
+
+.detail_section>div>button {
+    background-color: #FCFCFC;
+}
+
+.header_app {
+    display: none !important;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header_app {
+        display: block !important;
+    }
+
+    .web {
+        display: flex !important;
+    }
+
+    .app {
+        display: none !important;
+    }
+
+    .mypage_header {
+        display: none;
+    }
+
+    .profile_section {
+        height: 310px;
+    }
+
+    .none_profile_section {
+        display: none;
+    }
+
+    .none_profile_section_info {
+        display: none;
+    }
+
+    .profile_section>div {
+        width: 93px;
+        height: 93px;
+        margin: 41px 0 8px 0;
+    }
+
+    .profile_section>div>img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .my_name {
+        font-size: 36px;
+        height: 43px;
+    }
+
+    .profile_section>button {
+        width: 80px;
+        margin: 21px 0 30px 0;
+    }
+
+    .my_id {
+        display: block;
+        color: #A2A2A2;
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        height: 24px;
+    }
+
+    .profile_section>button {
+        width: 160px;
+        height: 47px;
+        font-size: 24px;
+
+
+        border-radius: 30px;
+    }
+
+    .gray_div {
+        display: none;
+    }
+
+    .my_class_info_header>p {
+        font-size: 24px;
+        margin: 0 0 0 0;
+        padding-bottom: 18px;
+        width: 497px;
+        border-bottom: 3px solid #01AEB0;
+        text-align: center;
+
+    }
+
+    .my_class_info_header {
+        border: 0;
+        margin-bottom: 46px;
+    }
+
+    .my_classes {
+        display: none;
+    }
+
+    .my_classes_web {
+        display: block;
+        margin: 0 145px 0 123px;
+    }
+
+
+    .gray_div {
+        display: none;
+    }
+
+    .detail_section {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .profile_section {
+        height: 341px;
+    }
+
+    .profile_section>button {
+        width: 180px;
+        height: 55px;
+        font-size: 26px;
+    }
+
+    .profile_section>div {
+        width: 103px;
+        height: 103px;
+    }
+
+    .profile_section>div>img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .my_class_info_header>p {
+        font-size: 30px;
+    }
+
+    .my_name {
+        font-size: 40px;
+        height: 50px;
+    }
+
+    .my_id {
+        font-size: 24px;
+        height: 30px;
+    }
+
+}

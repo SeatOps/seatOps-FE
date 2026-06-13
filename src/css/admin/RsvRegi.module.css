@@ -1,0 +1,159 @@
+.calender_ct {
+    margin: 0 167px 0 146px;
+}
+
+
+.class_form {
+    margin: 0px 267px 0 122px;
+}
+
+.class_day {
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.reservation_form,
+.select_bottom,
+.select_top {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.reservation_form>section>div {
+    margin-right: 77px;
+    display: flex;
+    align-items: center;
+
+}
+
+.labels {
+    width: 114px;
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.select_top select {
+    display: flex;
+    width: 100%;
+    height: 77px;
+    padding: 20px 40px 20px 14px;
+    /* 오른쪽 패딩을 늘려 텍스트와 화살표 겹침 방지 */
+    align-items: center;
+    border: 1px solid #A2A2A2;
+    background: #FCFCFC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #292929;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 10px;
+
+    /* 화살표 커스텀 */
+    -webkit-appearance: none;
+    /* 기본 화살표 제거 */
+    -moz-appearance: none;
+    appearance: none;
+
+    /* 아래는 화살표 이미지 예시입니다 (SVG 데이터) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    /* 핵심: 오른쪽에서 20px 띄우고 중앙 정렬 */
+    background-position: calc(100% - 20px) center;
+}
+
+.showP {
+    display: flex;
+    height: 77px;
+    padding: 20px 14px;
+    align-items: center;
+    background: #FCFCFC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 80px;
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.select_top>div>.showP {
+    width: 100%;
+}
+
+.select_bottom select {
+    display: flex;
+    width: 95px;
+    /* 패딩이 늘어나므로 가로 길이를 살짝 조정하는 것이 좋습니다 */
+    height: 57px;
+    padding: 0 30px 0 14px;
+    /* 오른쪽 여백 확보 */
+    align-items: center;
+    border: 1px solid #A2A2A2;
+    background: #FCFCFC;
+    border-radius: 5px;
+    color: #292929;
+    font-size: 23px;
+    font-weight: 500;
+
+    /* 화살표 커스텀 (상단과 동일) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../../img/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: calc(100% - 10px) center;
+    /* 작은 박스는 10px 정도가 적당합니다 */
+}
+
+.select_bottom>div>.showP {
+    border: 1px solid #A2A2A2;
+    height: 57px;
+
+}
+
+
+
+p+label {
+    margin-left: 12px;
+    margin-right: 30px;
+}
+
+
+select+label {
+    margin-left: 12px;
+    margin-right: 30px;
+}
+
+.gray_line {
+    width: 100%;
+    border: 1px solid #A2A2A2;
+}
+
+.year {
+    width: 120px !important;
+}
+
+.spansapn {
+    margin-right: 30px;
+}
+
+.prev_btn {
+    background-color: #D8D8D8 !important;
+}

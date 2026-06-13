@@ -1,0 +1,99 @@
+.scroll {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.scroll_section {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    margin-bottom: 30px;
+}
+
+.unscroll_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.scroll_reservationinfo {
+    flex: 0.9;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+
+.turn_display,
+.turn_display_app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    gap: 40px;
+
+
+}
+
+.turn_display>div {
+    width: 140px;
+    height: 100px;
+    border-radius: 10px;
+    border: 4px solid #01AEB0;
+
+    animation: spin 2s linear infinite;
+}
+
+.turn_display_app>div {
+    width: 100px;
+    height: 140px;
+    border-radius: 10px;
+    border: 4px solid #01AEB0;
+
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    10% {
+        transform: rotate(90deg);
+    }
+
+    60% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.turn_display_app {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .turn_display {
+        display: none;
+    }
+
+    .turn_display_app {
+        display: flex;
+    }
+}

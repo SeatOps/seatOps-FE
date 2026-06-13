@@ -1,0 +1,1123 @@
+.reservation-top-ct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 31px;
+    margin-bottom: 37px;
+}
+
+.reservation-top-ct>img:nth-child(1) {
+    margin-left: 26px;
+}
+
+.reservation-top-ct>img:nth-child(3) {
+    margin-right: 26px;
+}
+
+.rsr-header-ct {
+    margin-left: 61px;
+    margin-top: 47px;
+    display: flex;
+    gap: 28.51px;
+    width: 500px;
+}
+
+.rsr-sound-equipment {
+    width: 78.482px;
+    height: 36.223px;
+    border-radius: 0 0 20px 0;
+    background: #757575;
+
+    color: #FCFCFC;
+    font-family: 'Pretendard';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 칠판, 교탁 컨테이너 설정 */
+.rsr-header-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 9.5px;
+}
+
+/* 칠판 설정 */
+.rsr-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 271.67px;
+    height: 22.502px;
+    border-radius: 0 0 20px 20px;
+    background: #9ED0BE;
+
+    color: #FCFCFC;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin-left: 28.51px;
+}
+
+/* 교탁 설정 */
+.rsr-desk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120.742px;
+    height: 23.051px;
+    border-radius: 20px;
+    background: #9ED0BE;
+
+    color: #FCFCFC;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    text-align: center;
+    margin-left: 124px;
+}
+
+/* 자리간 간격 컨테이너(세로)  */
+.rsr-rows-ct {
+    display: flex;
+    flex-direction: column;
+    gap: 8.45px;
+    margin-top: 12.76px;
+    margin-bottom: 150px;
+}
+
+/* tv 컨테이너 */
+.rsr-tv-ct {
+    display: flex;
+    gap: 169.01px;
+    margin-left: 52.953px;
+}
+
+/* tv 설정 */
+.rsr-tv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80.678px;
+    height: 19.209px;
+    border-radius: 8px;
+    background: #01AEB0;
+
+    color: #FCFCFC;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* 가벽 설정 */
+.rsr-wall {
+    width: 10.428px;
+    height: 45.553px;
+    background: #757575;
+}
+
+
+/* 줄 전체 컨테이너(가벽, 출입문 등 전부포함) */
+.rsr-row {
+    display: flex;
+    align-items: center;
+    margin-right: 20.45px;
+    width: 480px;
+
+}
+
+/* 좌석만 포함되는 줄 컨테이너 */
+.rsr-seat-ct {
+    display: flex;
+    gap: 7.45px;
+
+}
+
+/* 좌석 버튼 기본 스타일 */
+.rsr-seat {
+    display: flex;
+    width: 45.553px;
+    height: 45.553px;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #ECECEC;
+
+    color: #A2A2A2;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* 출입문 설정 */
+.rsr-door {
+    width: 35.674px;
+    height: 53.236px;
+
+    border-radius: 0 80px 0 0;
+    background: #757575;
+}
+
+.door2row {
+    margin-right: 48.33px;
+}
+
+.doorrow {
+    margin-right: 44.43px;
+}
+
+
+
+/* 1~3번째 줄 설정 */
+.rsr-row-1,
+.rsr-row-2,
+.rsr-row-3 {
+    margin-left: 87px;
+}
+
+.rsr-row-4 {
+    margin-left: 61px;
+    width: 505px;
+}
+
+.rsr-row-5 {
+    margin-left: 144px;
+    width: 505px;
+}
+
+/* 6~17번째 줄 설정(14 제외 출입문) */
+.rsr-row-6,
+.rsr-row-7,
+.rsr-row-8,
+.rsr-row-9,
+.rsr-row-10,
+.rsr-row-11,
+.rsr-row-12,
+.rsr-row-13,
+.rsr-row-15,
+.rsr-row-16,
+.rsr-row-17 {
+    margin-left: 75px;
+}
+
+.rsr-row-14 {
+    margin-left: 61px;
+    width: 503.49px;
+}
+
+/* 1, 8, 15번 좌석 간격조정 */
+.rsr-seat-1,
+.rsr-seat-8,
+.rsr-seat-15 {
+    margin-right: 5px;
+}
+
+/* 2,, 9, 16번 좌석 간격조정 */
+.rsr-seat-2,
+.rsr-seat-9,
+.rsr-seat-16,
+.rsr-seat-22,
+.rsr-seat-28 {
+    margin-right: 27px;
+}
+
+/* 좌석 간격 조정 */
+.rsr-seat-4,
+.rsr-seat-11,
+.rsr-seat-18,
+.rsr-seat-24,
+.rsr-seat-30,
+.rsr-seat-6,
+.rsr-seat-13,
+.rsr-seat-20,
+.rsr-seat-26 {
+    margin-right: 28px;
+}
+
+.rsr-seat-34,
+.rsr-seat-42,
+.rsr-seat-50,
+.rsr-seat-58,
+.rsr-seat-66,
+.rsr-seat-74,
+.rsr-seat-82,
+.rsr-seat-96,
+.rsr-seat-103,
+.rsr-seat-110 {
+    margin-right: 12px;
+}
+
+.rsr-seat-35,
+.rsr-seat-43,
+.rsr-seat-51,
+.rsr-seat-59,
+.rsr-seat-67,
+.rsr-seat-75,
+.rsr-seat-83,
+.rsr-seat-90,
+.rsr-seat-97,
+.rsr-seat-104,
+.rsr-seat-111 {
+    margin-right: 16px;
+}
+
+.rsr-seat-37,
+.rsr-seat-45,
+.rsr-seat-53,
+.rsr-seat-61,
+.rsr-seat-69,
+.rsr-seat-77,
+.rsr-seat-85,
+.rsr-seat-92,
+.rsr-seat-99,
+.rsr-seat-106,
+.rsr-seat-113 {
+    margin-right: 9px;
+}
+
+.rsr-seat-39,
+.rsr-seat-47,
+.rsr-seat-55,
+.rsr-seat-63,
+.rsr-seat-71,
+.rsr-seat-79,
+.rsr-seat-87,
+.rsr-seat-94,
+.rsr-seat-101,
+.rsr-seat-108,
+.rsr-seat-115 {
+    margin-right: 10px;
+}
+
+.rsr-seat-95 {
+    margin-right: 43.02px;
+}
+
+.rsr-seat-32 {
+    margin-right: 12px;
+}
+
+.rsr-seat-33 {
+    margin-right: 6.02px;
+}
+
+.rsr-right-ct {
+    display: none;
+    z-index: 1001;
+}
+
+.lecture-inf {
+    display: none;
+}
+
+
+.reservation-scroll-ct {
+    width: 500px;
+    padding-bottom: 50px;
+}
+
+.rsr-seat-selected {
+    background: #4D4D4D;
+    color: #FCFCFC;
+}
+
+.rsr-seat-reserved {
+    background: #A2A2A2;
+    color: #A2A2A2;
+}
+
+/* 하단 좌석 범례: 예약하기 버튼 바로 위에 고정 */
+.seat-mobile-ct {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    /* 버튼 높이만큼 위로 */
+    height: 60px;
+    background: #FFFFFF;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.pick-seat-ct {
+    display: flex;
+    gap: 24px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.pick-possible,
+.pick-already-complete {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pick-possible>p,
+.pick-already-complete>p {
+    color: #757575;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.seat-color-pp,
+.seat-color-ac,
+.seat-color-ac2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.seat-color-pp {
+    background: #ECECEC;
+}
+
+.seat-color-ac {
+    background: #A2A2A2;
+}
+
+.seat-color-ac2 {
+    background: #4D4D4D;
+}
+
+/* 공통 예약하기 버튼 (모바일 기준) */
+.rsr-reservation-btn2 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    /* 화면 맨 아래 고정 */
+    height: 70px;
+    border: none;
+    background: #A2A2A2;
+    color: #FCFCFC;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 1001;
+}
+
+/* ===== 1. 전체 화면 고정 ===== */
+.media-ct {
+    height: 100vh;
+    overflow: hidden;
+    /* 전체 스크롤 완전 차단 */
+    position: relative;
+}
+
+/* ===== 3. 좌석 영역만 독립 스크롤 ===== */
+.reservation-total-ct {
+
+    width: 380px;
+    height: 100vh;
+    padding-top: 0px;
+    /* 헤더 공간 */
+    padding-bottom: 150px;
+    overflow: hidden;
+    background-color: #FCFCFC;
+}
+
+/* 좌석 차트 컨테이너만 스크롤 가능 */
+.rsr-ct {
+    width: 380px;
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+    /* padding-right: 25px; */
+    box-sizing: border-box;
+    background-color: #FCFCFC;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    z-index: 1000;
+}
+
+.rsr-ct::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media(min-width : 650px) {
+
+    .pick-possible>p,
+    .pick-already-complete>p {
+        font-size: 15px;
+    }
+}
+
+@media(min-width:1024px) {
+    .reservation-top-ct {
+        display: none;
+    }
+
+
+    .rsr-reservation-btn2 {
+        display: none;
+    }
+
+    .rsr-rows-ct {
+        margin-bottom: 10px;
+    }
+
+    .seat-mobile-ct {
+        position: relative;
+        width: 450px;
+        gap: 20px;
+        margin-left: 50px;
+        margin-top: 100px;
+        box-shadow: none;
+        /* margin-left: 0px; */
+        background-color: #FCFCFC;
+        margin-bottom: 150px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .reservation-scroll-ct {
+        width: 550px;
+        padding-bottom: 0px;
+        overflow-y: initial;
+
+    }
+
+    .reservation-total-ct {
+        width: 100%;
+    }
+
+    .rsr-ct {
+        width: 600px;
+        overflow-x: hidden;
+        padding-right: 0px;
+    }
+
+    .rsr-row {
+        width: 500px;
+    }
+
+    .rsr-right-ct {
+        display: block;
+        /* margin: 0 auto; */
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        height: 100vh;
+        padding-left: 30px;
+        border-color: #CFD8DC;
+        width: 90%;
+    }
+
+    .rsr-right-inf {
+        color: #01AEB0;
+        font-family: 'Pretendard';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 29px;
+        margin-bottom: 25px;
+    }
+
+    .lector-inf-ct {
+        margin-top: 0px;
+    }
+
+    .rsr-right-date {
+        color: #4D4D4D;
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        text-align: left;
+    }
+
+
+    .lector-classroom-ct {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #A2A2A2;
+        font-family: 'Pretendard';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 10px;
+    }
+
+    .lector-middle {
+        font-size: 20px;
+    }
+
+    .rsr-reservation-btn,
+    .rsr-back-btn,
+    .rsr-delete-btn,
+    .rsr-edit-btn {
+        display: flex;
+        width: 95%;
+        height: 58px;
+        padding: 17px 51px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+
+        background: #D8D8D8;
+        position: static;
+
+        color: #FCFCFC;
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 98px;
+
+        margin-top: 16px;
+
+    }
+
+    .rsr-edit-btn {
+        background-color: #01AEB0;
+    }
+
+    .rsr-back-btn {
+        margin-top: 80px;
+    }
+
+    .lecture-inf {
+        margin-left: 90px;
+        margin-top: 20px;
+
+        display: block;
+        color: #01AEB0;
+        font-family: 'Pretendard';
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 60px;
+        margin-top: 29px;
+    }
+
+    .rsr-header-ct {
+        margin-left: 31px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 57px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 31px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 114px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 45px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 31px;
+        width: 503.49px;
+    }
+
+
+}
+
+@media (min-width : 1024px) and (max-width : 1070px) {
+
+    .rsr-reservation-btn,
+    .rsr-back-btn,
+    .rsr-delete-btn,
+    .rsr-edit-btn {
+        width: 75%;
+    }
+}
+
+@media (min-width :1250px) {
+
+    .rsr-reservation-btn,
+    .rsr-back-btn,
+    .rsr-delete-btn,
+    .rsr-edit-btn {
+        height: 68px;
+    }
+}
+
+@media (min-width : 1250px) and (max-width : 1400px) {
+    .reservation-scroll-ct {
+        width: 650px;
+        padding-bottom: 0px;
+        overflow-y: initial;
+    }
+
+    .rsr-header-ct {
+        margin-left: 61px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 87px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 61px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 144px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 75px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 61px;
+        width: 503.49px;
+    }
+
+    .lecture-inf,
+    .rsr-right-inf {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .rsr-right-date {
+        font-size: 38px;
+    }
+
+    .lector-classroom-ct {
+        font-size: 33px;
+    }
+
+    .seat-mobile-ct {
+        width: 500px;
+    }
+
+    .pick-possible>p:nth-child(1),
+    .pick-already-complete>p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 20px;
+    }
+}
+
+@media (min-width : 1400px) {
+    .reservation-scroll-ct {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .rsr-header-ct {
+        margin-left: 61px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 87px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 61px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 144px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 75px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 61px;
+        width: 503.49px;
+    }
+
+    .lecture-inf,
+    .rsr-right-inf {
+        font-size: 33px;
+        margin-bottom: 30px;
+    }
+
+    .rsr-right-date {
+        font-size: 43px;
+    }
+
+    .lector-classroom-ct {
+        font-size: 30px;
+    }
+
+    .seat-mobile-ct {
+        width: 500px;
+    }
+
+    .pick-possible>p:nth-child(1),
+    .pick-already-complete>p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 20px;
+    }
+}
+
+@media(min-width : 1650px) {
+    .reservation-scroll-ct {
+        width: 150%;
+
+    }
+
+    .rsr-ct {
+        width: 950px;
+    }
+
+    .rsr-header-ct {
+        display: flex;
+        gap: 52px;
+        width: 850px;
+        margin-left: 30px;
+    }
+
+    .rsr-sound-equipment {
+        width: 143px;
+        height: 66px;
+        font-size: 28px;
+    }
+
+    .rsr-header-flex {
+        gap: 14px;
+    }
+
+    .rsr-board {
+        width: 495px;
+        height: 41px;
+        font-size: 28px;
+        margin-left: 0px;
+    }
+
+    /* 교탁 설정 */
+    .rsr-desk {
+        width: 220px;
+        height: 42px;
+        font-size: 30px;
+        margin-left: 168px;
+    }
+
+    /* 자리간 간격 컨테이너(세로)  */
+    .rsr-rows-ct {
+        gap: 14px;
+    }
+
+    /* tv 컨테이너 */
+    .rsr-tv-ct {
+        gap: 308px;
+        margin-left: 122px;
+    }
+
+    /* tv 설정 */
+    .rsr-tv {
+        width: 147px;
+        height: 35px;
+        border-radius: 8px;
+        font-size: 30px;
+    }
+
+    /* 가벽 설정 */
+    .rsr-wall {
+        width: 19px;
+        height: 83px;
+    }
+
+    /* 줄 전체 컨테이너(가벽, 출입문 등 전부포함) */
+    .rsr-row {
+        width: 1000px;
+        margin-left: 0px;
+
+    }
+
+    /* 좌석만 포함되는 줄 컨테이너 */
+    .rsr-seat-ct {
+        gap: 13px;
+    }
+
+    /* 좌석 버튼 기본 스타일 */
+    .rsr-seat {
+        width: 84px;
+        height: 83px;
+        padding: 13px 22px;
+        gap: 10px;
+        border-radius: 20px;
+        font-size: 30px;
+    }
+
+    /* 출입문 설정 */
+    .rsr-door {
+        width: 65px;
+        height: 97px;
+    }
+
+    .door2row {
+        margin-right: 91px;
+    }
+
+    .doorrow {
+        margin-right: 81px;
+    }
+
+    /* 1~3번째 줄 설정 */
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 78px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 31px;
+        width: 1005px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 184px;
+        width: 1005px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 55px;
+    }
+
+    .rsr-row-8 {
+        margin: 0px;
+        margin-left: 30px
+    }
+
+    .rsr-row-14 {
+        width: 1000px;
+        margin-left: 30px;
+    }
+
+    /* 1, 8, 15번 좌석 간격조정 */
+    .rsr-seat-1,
+    .rsr-seat-8,
+    .rsr-seat-15 {
+        margin-right: 9px;
+    }
+
+    /* 2,, 9, 16번 좌석 간격조정 */
+    .rsr-seat-2,
+    .rsr-seat-9,
+    .rsr-seat-16,
+    .rsr-seat-22,
+    .rsr-seat-28 {
+        margin-right: 50px;
+    }
+
+    /* 좌석 간격 조정 */
+    .rsr-seat-4,
+    .rsr-seat-11,
+    .rsr-seat-18,
+    .rsr-seat-24,
+    .rsr-seat-30,
+    .rsr-seat-6,
+    .rsr-seat-13,
+    .rsr-seat-20,
+    .rsr-seat-26 {
+        margin-right: 50px;
+    }
+
+    .rsr-seat-34,
+    .rsr-seat-42,
+    .rsr-seat-50,
+    .rsr-seat-58,
+    .rsr-seat-66,
+    .rsr-seat-74,
+    .rsr-seat-82,
+    .rsr-seat-96,
+    .rsr-seat-103,
+    .rsr-seat-110 {
+        margin-right: 23px;
+    }
+
+    .rsr-seat-35,
+    .rsr-seat-43,
+    .rsr-seat-51,
+    .rsr-seat-59,
+    .rsr-seat-67,
+    .rsr-seat-75,
+    .rsr-seat-83,
+    .rsr-seat-90,
+    .rsr-seat-97,
+    .rsr-seat-104,
+    .rsr-seat-111 {
+        margin-right: 28px;
+    }
+
+    .rsr-seat-37,
+    .rsr-seat-45,
+    .rsr-seat-53,
+    .rsr-seat-61,
+    .rsr-seat-69,
+    .rsr-seat-77,
+    .rsr-seat-85,
+    .rsr-seat-92,
+    .rsr-seat-99,
+    .rsr-seat-106,
+    .rsr-seat-113 {
+        margin-right: 17px;
+    }
+
+    .rsr-seat-39,
+    .rsr-seat-47,
+    .rsr-seat-55,
+    .rsr-seat-63,
+    .rsr-seat-71,
+    .rsr-seat-79,
+    .rsr-seat-87,
+    .rsr-seat-94,
+    .rsr-seat-101,
+    .rsr-seat-108,
+    .rsr-seat-115 {
+        margin-right: 17px;
+    }
+
+    .rsr-seat-95 {
+        margin-right: 72px;
+    }
+
+    .rsr-seat-32 {
+        margin-right: 23px;
+    }
+
+    .rsr-seat-33 {
+        margin-right: 6px;
+    }
+
+    .seat-mobile-ct {
+        width: 850px;
+    }
+
+    .pick-seat-ct {
+        gap : 20px;
+        width : 700px;
+    }
+
+    .pick-possible>p:nth-child(1),
+    .pick-already-complete>p:nth-child(1) {
+        font-size: 30px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    .seat-color-pp,
+    .seat-color-ac,
+    .seat-color-ac2,
+    .e-seat-color-pp,
+    .e-seat-color-ac,
+    .e-seat-color-ac2 {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+/* 좌석을 하나라도 선택했을 때 */
+.rsr-reservation-btn-active {
+    background: #01AEB0;
+}

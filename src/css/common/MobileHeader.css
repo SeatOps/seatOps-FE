@@ -1,0 +1,15 @@
+.mobile-top-header-ct {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top : 20px;
+}
+
+.modile-academy-logo {
+    margin-left : 25px;
+}
+
+.mobile-profile-img {
+    margin-right : 25px;
+}
+

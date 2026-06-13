@@ -1,0 +1,623 @@
+@media(min-width: 360px) and (max-width : 400px) {
+    .reservation-total-ct {
+        width: 400px;
+    }
+
+    .rsr-ct {
+        width: 400px;
+    }
+}
+
+
+
+@media(min-width: 400px) and (max-width : 500px) {
+    .reservation-total-ct {
+        width: 450px;
+    }
+
+    .rsr-ct {
+        width: 450px;
+    }
+}
+
+@media(min-width: 440px) and (max-width : 500px) {
+    .reservation-total-ct {
+        width: 500px;
+    }
+
+    .rsr-ct {
+        width: 500px;
+    }
+}
+
+@media(min-width: 501px) and (max-width : 600px) {
+    .reservation-total-ct {
+        width: 550px;
+    }
+
+    .rsr-ct {
+        width: 550px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media(min-width: 550px) and (max-width : 600px) {
+    .reservation-total-ct {
+        width: 600px;
+    }
+
+    .rsr-ct {
+        width: 600px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media(min-width: 570px) and (max-width : 600px) {
+    .reservation-total-ct {
+        width: 600px;
+    }
+
+    .rsr-ct {
+        width: 600px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 71px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 97px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 71px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 154px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 85px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 71px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 601px) and (max-width : 700px) {
+    .reservation-total-ct {
+        width: 700px;
+    }
+
+    .rsr-ct {
+        width: 700px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 71px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 97px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 71px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 154px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 85px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 71px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 650px) and (max-width : 700px) {
+    .reservation-total-ct {
+        width: 700px;
+    }
+
+    .rsr-ct {
+        width: 700px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 101px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left:127px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 101px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 184px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 115px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 101px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 700px) and (max-width : 800px) {
+    .reservation-total-ct {
+        width: 750px;
+    }
+
+    .rsr-ct {
+        width: 750px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 121px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left:147px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 121px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 204px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 135px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 121px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 750px) and (max-width : 800px) {
+    .reservation-total-ct {
+        width: 800px;
+    }
+
+    .rsr-ct {
+        width: 800px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 151px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left:177px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 151px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 234px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 165px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 151px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 800px) and (max-width : 900px) {
+    .reservation-total-ct {
+        width: 850px;
+    }
+
+    .rsr-ct {
+        width: 850px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 171px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 197px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 171px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 254px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 185px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 171px;
+        width: 503.49px;
+    }
+
+}
+
+
+@media(min-width: 850px) and (max-width : 900px) {
+    .reservation-total-ct {
+        width: 900px;
+    }
+
+    .rsr-ct {
+        width: 900px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 191px
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 217px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 191px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 274px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 205px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 191px;
+        width: 503.49px;
+    }
+
+}
+
+
+@media(min-width: 900px) and (max-width : 1000px) {
+    .reservation-total-ct {
+        width: 950px;
+    }
+
+    .rsr-ct {
+        width: 950px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 211px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 237px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 211px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 294px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 225px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 211px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 950px) and (max-width : 1000px) {
+    .reservation-total-ct {
+        width: 1000px;
+    }
+
+    .rsr-ct {
+        width: 1000px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 241px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 267px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 241px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 324px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 255px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 241px;
+        width: 503.49px;
+    }
+
+}
+
+@media(min-width: 1000px) and (max-width : 1023px) {
+    .reservation-total-ct {
+        width: 1030px;
+    }
+
+    .rsr-ct {
+        width: 1030px;
+    }
+
+    .rsr-seat {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rsr-header-ct {
+        margin-left : 251px;
+    }
+
+    .rsr-row-1,
+    .rsr-row-2,
+    .rsr-row-3 {
+        margin-left: 277px;
+    }
+
+    .rsr-row-4 {
+        margin-left: 251px;
+        width: 505px;
+    }
+
+    .rsr-row-5 {
+        margin-left: 334px;
+        width: 505px;
+    }
+
+    /* 6~17번째 줄 설정(14 제외 출입문) */
+    .rsr-row-6,
+    .rsr-row-7,
+    .rsr-row-8,
+    .rsr-row-9,
+    .rsr-row-10,
+    .rsr-row-11,
+    .rsr-row-12,
+    .rsr-row-13,
+    .rsr-row-15,
+    .rsr-row-16,
+    .rsr-row-17 {
+        margin-left: 265px;
+    }
+
+    .rsr-row-14 {
+        margin-left: 251px;
+        width: 503.49px;
+    }
+
+}

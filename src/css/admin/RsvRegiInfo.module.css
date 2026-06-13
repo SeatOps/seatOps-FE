@@ -1,0 +1,53 @@
+.class_ct {
+    margin: 0 63px 0 112px;
+}
+
+.class_ct>div {
+    border-radius: 10px;
+    border: 1px solid #A2A2A2;
+
+    background: #FCFCFC;
+    box-shadow: none;
+    margin-bottom: 8px;
+}
+
+.pagination {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+
+}
+
+.pagination>button {
+    color: #757575;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #FCFCFC;
+}
+
+.activePage {
+    color: #01AEB0 !important;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.no_admin {
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

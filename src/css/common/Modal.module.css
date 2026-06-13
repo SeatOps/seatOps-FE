@@ -1,0 +1,265 @@
+.modal_parent::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+
+    /* 핵심 설정 */
+    z-index: 200;
+    pointer-events: auto;
+}
+
+.modal_parent {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    pointer-events: auto;
+}
+
+.modal {
+    border-radius: 10px;
+    border: 1px solid #2C8FFF;
+    background: #FCFCFC;
+    box-shadow: 0 0 5px 0 rgba(44, 143, 255, 0.50);
+    height: 133.03px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    width: 90%;
+    z-index: 999;
+
+}
+
+.modal p {
+    color: #2C8FFF;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 33px 10px 22px 10px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.black_p {
+    color: #4D4D4D !important;
+}
+
+.modal>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    border-top: 1px solid #A2A2A2;
+    height: 33px;
+}
+
+.modal button {
+    width: 100%;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #FCFCFC;
+    height: 100%;
+}
+
+.modal button:first-of-type {
+    color: #4D4D4D;
+    border-right: 0px;
+}
+
+
+.modal button:last-of-type {
+    color: #2C8FFF;
+}
+
+.modal button+button {
+    color: #4D4D4D;
+    border-left: 1px solid #A2A2A2;
+}
+
+
+.togle_input_div {
+    margin-top: 10px;
+    padding: 0 20px;
+    gap: 186px;
+    border-radius: 5px;
+    border: 1px solid #A2A2A2;
+    width: 400px !important;
+    background: #FCFCFC;
+    font-family: 'Pretendard';
+}
+
+.togle_input_div>input {
+    width: 100%;
+    background: #FCFCFC;
+    font-family: 'Pretendard';
+    margin-top: 0px !important;
+    outline: none;
+}
+
+.togle_input_div>button {
+    width: 22px;
+    height: 20.8px;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
+.passwordP {
+    color: #4D4D4D !important;
+    margin: 0 0 2px 0 !important;
+    height: 24px !important;
+
+}
+
+.unerrorP {
+    font-size: 11px !important;
+    margin: 5px 0 10px 0 !important;
+    height: 11px !important;
+    color: #FCFCFC !important;
+}
+
+.errorP {
+    color: red !important;
+}
+
+
+
+.error_input {
+    border: 1px solid #F00 !important;
+}
+
+
+@media screen and (min-width: 400px) {
+    .modal {
+        width: 358px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .modal {
+        width: 458px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .modal {
+        border-radius: 20px;
+        border: 1px solid #2C8FFF;
+        background: #FCFCFC;
+        box-shadow: 0 0 10px 0 rgba(44, 143, 255, 0.50);
+        width: 500px;
+        height: 200px;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom: 2px;
+
+
+    }
+
+    .modal p {
+        color: #2C8FFF;
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 38px 10px 26px 10px;
+        white-space: pre-wrap;
+        height: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal>div>div {
+        height: 50px;
+        border-top: 2px solid #A2A2A2;
+
+    }
+
+
+
+
+    .modal button+button {
+        color: #4D4D4D;
+        border-left: 1px solid #A2A2A2;
+    }
+
+    .modal button {
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .modal {
+        width: 848.861px;
+        height: 279px;
+    }
+
+    .modal p {
+        color: #2C8FFF;
+        font-size: 28px;
+        margin: 69px 10px 47px 10px;
+        height: 79px;
+    }
+
+    .modal>div>div {
+        height: 78px;
+    }
+
+    .modal button+button {
+        color: #4D4D4D;
+        border-left: 1px solid #A2A2A2;
+    }
+
+    .modal button {
+        height: 78px;
+        font-size: 24px;
+
+    }
+
+
+    .togle_input_div {
+        height: 65px !important;
+
+    }
+
+}

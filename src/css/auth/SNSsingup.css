@@ -1,0 +1,31 @@
+.sns-id-singup {
+    background: #d8d8d8 !important;
+}
+
+.sns-psw-signup {
+    background: #d8d8d8 !important;
+    font-size : 15px;
+    border-color: #FF0000;
+}
+
+.sns-login-pharse {
+    color: #2C8FFF;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width : 1024px) {
+    .sns-login-pharse {
+        color: #2C8FFF;
+        font-size: 13.5px;
+        width: 55%;
+    }
+
+}

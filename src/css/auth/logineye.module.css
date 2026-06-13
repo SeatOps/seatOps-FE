@@ -1,0 +1,29 @@
+.input_div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+.input_div:focus {
+    outline: 1px solid black;
+}
+
+.input_div>input {
+    padding: 14px 20px;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.input_div button {
+    top: 15px;
+}
+
+@media screen and (min-width: 2001px) {
+    .input_div button {
+        top: 24px !important;
+    }
+
+
+}

@@ -1,0 +1,126 @@
+.reservation-modal-ct {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-window-ct {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 완벽 중앙! */
+    background: #FCFCFC;
+    padding: 32px 24px;
+    border-radius: 20px;
+    text-align: center;
+    width: 280px;
+    height: 130px;
+    border: 1px solid #2C8FFF;
+    box-shadow: 0 0 10px 0 rgba(44, 143, 255, 0.50);
+}
+
+.modal-window-ct>p {
+    color: #4D4D4D;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.modal-window-ct>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 완벽 중앙! */
+    width: 260Px;
+    height: 1px;
+    background-color: #A2A2A2;
+    margin-top: 20px;
+}
+
+.modal-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #2C8FFF;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #FCFCFC;
+    border: none;
+    margin-top: 40px;
+}
+
+@media (min-width : 700px) and (max-width : 1439px) {
+    .modal-window-ct {
+        width: 500px;
+        height: 200px;
+    }
+
+    .modal-window-ct>p {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .modal-window-ct>div {
+        width: 450px;
+        height: 1px;
+        margin-top: 30px;
+    }
+
+    .modal-button {
+        font-size: 20px;
+        margin-top: 60px;
+    }
+
+
+}
+
+@media (min-width : 1440px) {
+
+    .modal-window-ct {
+        width: 800px;
+        height: 280px;
+    }
+
+    .modal-window-ct>p {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 60px;
+    }
+
+    .modal-window-ct>div {
+        /* 완벽 중앙! */
+        width: 750px;
+        height: 1px;
+        margin-top: 50px;
+    }
+
+    .modal-button {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+        margin-top: 90px;
+    }
+
+}

@@ -1,0 +1,42 @@
+.protect-another-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 80vh;
+}
+
+.protect-pharse {
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.login-redirect-btn {
+    color: #FCFCFC;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: #01AEB0;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+@media (min-width : 1024px) {
+    .protect-pharse {
+        font-size: 40px;
+    }
+
+    .login-redirect-btn {
+        width: 250px;
+        height: 70px;
+    }
+}

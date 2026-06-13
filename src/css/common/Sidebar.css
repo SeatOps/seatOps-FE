@@ -1,0 +1,106 @@
+.side-ct {
+    display: none;
+}
+
+@media (min-width : 1024px) {
+    .sidebar-ct {
+        display: flex;
+    }
+
+    .side-ct {
+        display: flex !important;
+        flex-direction: column;
+        height: 100dvh;
+        background-color: #CAE8DD;
+        width: 100px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+        flex-shrink: 0;
+        /* 축소 방지 */
+        justify-content: space-between;
+    }
+
+    /* 사이드바 홈, 일정, 관리자 컨테이너 */
+    .side-content-ct {
+        display: flex;
+        flex-direction: column;
+        margin-top: 9rem;
+    }
+
+    /* 홈, 일정, 관리자 설정 */
+    .side-home,
+    .side-schedule,
+    .side-manager,
+    .side-mypage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 6rem;
+    }
+
+    /* 홈, 일정, 관리자 글씨 */
+    .side-home>p,
+    .side-schedule>p,
+    .side-manager>p,
+    .side-mypage>p {
+        color: #FFF;
+        font-family: 'Pretendard';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    /* 사용자 이미지 관리 */
+    .side-user {
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    /* 기존 .side-home, .side-schedule, .side-manager는 flex 정렬, padding 등만 두고 */
+
+    .side-home,
+    .side-schedule,
+    .side-manager,
+    .side-mypage {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* 활성화되었을 때 배경색 */
+    .side-active {
+        background-color: #9ED0BE;
+    }
+}
+
+
+@media (min-width : 1920px) {
+    .side-content-ct {
+        margin-top: 12.4rem;
+    }
+}
+
+@media (min-width : 1440px) {
+    .side-ct {
+        display: flex !important;
+        flex-direction: column;
+        height: 100dvh;
+        background-color: #CAE8DD;
+        width: 120px !important;
+        min-width: 120px !important;
+        max-width: 120px !important;
+        flex-shrink: 0;
+        /* 축소 방지 */
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,538 @@
+/* IdFind.jsx */
+.idfind-info-ct,
+.pswfind-info-ct {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 42px;
+}
+
+.idfind-btn,
+.idfind-btn2,
+.idfind-back-btn {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #01AEB0;
+    height: 53px;
+
+    color: #FAFAFA;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.idfind-btn2 {
+    margin-bottom: 200px;
+}
+
+.idfind-back-btn {
+    background-color: #D9D9D9;
+}
+
+.idfind-btn:disabled,
+.idfind-btn2:disabled {
+    background-color: #D9D9D9;
+    cursor: not-allowed;
+}
+
+
+/* 활성화 상태 (모든 입력값 채워졌을 때) */
+.idfind-btn.idfind-btn-active,
+.idfind-btn2.idfind-btn-active {
+    background-color: #01AEB0;
+    /* 원하는 포인트 색 */
+    cursor: pointer;
+}
+
+.idfind-btn-ct {
+    display: none;
+}
+
+@media (min-width : 1024px) {
+
+    .ls-name-ct,
+    .ls-number-ct,
+    .ls-attendance-ct,
+    .ls-id-ct,
+    .ls-email-ct,
+    .pswfind-email-ct,
+    .ls-psw-ct,
+    .ls-psw-check-ct {
+        width: 55% !important;
+    }
+
+    .idfind-btn2 {
+    margin-bottom: 0px;
+}
+
+    .idfind-btn-ct {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        width : 100%;
+    }
+
+    .idfind-btn,
+    .idfind-back-btn {
+        width: 35%;
+        margin: 0px;
+        margin-bottom: 44px;
+        margin-top: 31px;
+    }
+
+
+    .idfind-btn2 {
+        display: none;
+    }
+
+}
+
+/* IdFind2.jsx */
+.idfind2-coment {
+    color: #4D4D4D;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 57px;
+}
+
+.user-find-inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 132px;
+    border-radius: 10px;
+    border: 1px solid #A2A2A2;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.user-find-inf>p {
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.idfind2-btn-ct {
+    display: flex;
+    width: 80%;
+    /* height: 50px; */
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom : 200px;
+}
+
+.idfind2-btn-ct>button {
+    color: #01AEB0;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    width: 45%;
+    height: 53px;
+    border-radius: 5px;
+    border: 1px solid #01AEB0;
+    background-color: #FFF;
+}
+
+/* PasswordFind.jsx */
+.pswfind-recheck-btn {
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #01AEB0;
+    width: 85%;
+    display: block;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 53px;
+    margin-top: 38px;
+}
+
+.pswfind-recheck-btn:disabled {
+    background-color: #D9D9D9;
+}
+
+/* 활성화 상태 (세 input이 모두 채워졌을 때) */
+.pswfind-recheck-btn.pswfind-recheck-btn-active {
+    background-color: #01AEB0;
+}
+
+.pswfind-complete,
+.psw-recheck-btn {
+    display: none;
+}
+
+.pswfind-complete {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* margin-top : 100px; */
+
+}
+
+.psw-complete-pharse {
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.psw-complete-content-pharse {
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.psw-complete-content-pharse>span {
+    color: #01AEB0;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.psw-resetting-btn-ct {
+    display : flex;
+    justify-content: center;
+}
+
+.psw-resetting-btn {
+    width: 85%;
+    height: 53px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #01AEB0;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 39px;
+    margin-bottom: 200px;;
+}
+
+@media(min-width : 501px) and (max-width : 1023px) {
+    .psw-resetting-btn {
+        width : 60%;
+    }
+}
+
+@media (min-width : 1024px) {
+    .idfind2-coment {
+        font-size: 20px;
+    }
+
+    .user-find-inf {
+        width: 45%;
+        height: 205px;
+    }
+
+    .user-find-inf>p {
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .idfind2-btn-ct {
+        width: 45%;
+        margin-bottom: 44px;
+    }
+
+    .idfind2-btn-ct>button {
+        width: 49%;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 5px;
+        border: 2px solid #01AEB0;
+        background-color: #FCFCFC;
+    }
+    
+
+    .pswfind-recheck-btn {
+        width: 40%;
+        margin-bottom: 44px;
+    }
+
+    .pswfind-complete>p:nth-child(1) {
+        margin-top: 125px;
+    }
+
+    .psw-resetting-btn {
+        width: 30%;
+        margin-bottom: 172px;
+    }
+
+    .pswfind-complete {
+        margin-top : 100px;
+    }
+}
+
+@media(min-height : 720px) and (max-height : 900px) {
+    .pswfind-complete>p:nth-child(1) {
+        margin-top: 100px;
+    }
+}
+
+/* PswResetting.jsx */
+.psw-resetting-ins {
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 43px;
+    margin-bottom: 34px;
+    ;
+}
+
+.new-psw-total-ct {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* width: 80%; */
+    margin: 0 auto;
+}
+
+.new-psw-ct,
+.new-psw-recheck-ct {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.new-psw-ct>label,
+.new-psw-recheck-ct>label {
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.new-psw-ct>p,
+.new-psw-recheck-ct>p {
+    color: #8B8686;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.new-psw-ct>input::placeholder,
+.new-psw-recheck-ct>input::placeholder {
+    color: #D5D5D5;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pw-input-wrap {
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid #A2A2A2;
+    padding: 14px 60px 14px 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.pw-input-wrap input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 0;
+}
+
+.psw-change-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #01AEB0;
+    height: 53px;
+
+    color: #FAFAFA;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 52px;
+}
+
+.pw-icon-btn {
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+
+.psw-change-btn:disabled {
+    background-color: #D9D9D9;
+}
+
+/* 일치했을 때 활성 색상 */
+.psw-change-btn.psw-change-btn-active {
+    background-color: #01AEB0;
+    /* 원하는 포인트 색 */
+}
+
+.newpassword-match-pharse,
+.newpassword-match-pharse2 {
+    color: #F00;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 28px;
+    text-align: center;
+    display: none;
+}
+
+.newpassword-match-pharse2 {
+    display: block;
+}
+
+.ls-pswresetting-ct, .ls-pswresetting-check-ct {
+    width : 70%;
+    margin : 0 auto;
+}
+@media (min-width : 1024px) {
+    .psw-resetting-ins {
+        width: 55%;
+    }
+
+    .new-psw-total-ct {
+        /* width: 50%; */
+    }
+
+    .psw-change-btn {
+        width: 40%;
+        margin-bottom: 32px;
+        margin-top: 50px;
+
+    }
+
+    .newpassword-match-pharse {
+        display: block;
+    }
+
+    .newpassword-match-pharse2 {
+        display: none;
+    }
+
+    .pw-input-wrap {
+    height: 66px;
+    }
+
+    .pw-icon-btn {
+    top: 24px;
+    }
+    .ls-pswresetting-ct, .ls-pswresetting-check-ct {
+    width : 55%;
+    margin : 0 auto;
+}
+}
+
+/* PswChangeComplete.jsx */
+.pswchange-complete-check-img-ct {
+    margin-top: 84px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pswchange-completecheck-img {
+    position: absolute;
+}
+
+.pswchange-complete-btn {
+    border-radius: 5px;
+    background: #01AEB0;
+    width: 80%;
+    height: 53px;
+
+    color: #FAFAFA;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 83px;
+}
+
+@media (min-width : 1024px) {
+    .pswchange-complete-btn {
+        width: 30%;
+        margin-bottom: 87px;
+    }
+}
+
+.ls-pswresetting-ct, .ls-pswresetting-check-ct { 
+    display : flex;
+    flex-direction: column;
+    gap : 5px;
+}
+
+.mobile-marign {
+    margin-bottom: 0px !important;
+}

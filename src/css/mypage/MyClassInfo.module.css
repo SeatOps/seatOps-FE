@@ -1,0 +1,224 @@
+.mypage_header {
+    width: 100%;
+    height: 96px;
+    background: #ECECEC;
+    padding-right: 43px;
+}
+
+.profile_section {
+    height: 264px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ECECEC;
+}
+
+.profile_section>div {
+    width: 71px;
+    height: 71px;
+    background-color: #B0BEC5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 18px 0;
+}
+
+.profile_section>p {
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.mypage_header>div {
+    padding-top: 55px;
+    display: flex;
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.mypage_header>div>button {
+    display: flex;
+    width: 33px;
+    height: 33px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    background-color: #ECECEC;
+    margin-left: 10px;
+}
+
+.mypage_header>div>p {
+    margin: auto;
+}
+
+
+
+
+.date_time_ct {
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.gray_ct {
+    display: flex;
+    width: 51px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: #B0BEC5;
+    color: #FFF;
+    font-family: 'Pretendard';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 3px;
+}
+
+.gray_ct+p {
+    color: #757575;
+    font-family: 'Pretendard';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.gray_line {
+    width: 2px;
+    background: #D8D8D8;
+    height: 16px;
+}
+
+.seat_num {
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.my_class_info>div {
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 26px;
+    align-items: center;
+}
+
+.my_class_info>div:first-of-type {
+    gap: 10px;
+    margin: 0 0 14px 26px;
+}
+
+.my_class_info>div>p {
+    margin: 0;
+
+}
+
+.flex_column {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.my_class_info {
+    padding-top: 28px;
+    height: 231px;
+    margin: 0 26px 0 26px;
+    border-radius: 30px;
+    background: #FCFCFC;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.02) inset, 2px 2px 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.my_class_margin {
+    position: absolute;
+    top: 280px;
+    width: 100%;
+}
+
+.my_class_btns {
+    margin-right: 26px;
+    margin-top: 23px;
+    gap: 10px;
+
+}
+
+.my_class_btn {
+    margin-right: 26px;
+    margin-top: 23px;
+}
+
+.my_class_btn>button {
+    display: flex;
+    height: 33px;
+    padding: 6px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    background: #B0BEC5;
+    color: #FCFCFC;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 100%;
+}
+
+.my_class_btns>button {
+    border-radius: 20px;
+    border: 1px solid #01AEB0;
+    display: flex;
+    height: 33px;
+    padding: 6px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #FCFCFC;
+    color: #01AEB0;
+    font-family: 'Pretendard'
+    ;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 50%;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .mypage_header {
+        display: none;
+    }
+
+    .profile_section {
+        display: none;
+    }
+
+    .my_class_margin {
+        display: none
+    }
+}

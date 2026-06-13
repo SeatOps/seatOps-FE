@@ -1,0 +1,95 @@
+.e-seat-color-pp {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background: #A2A2A2;
+}
+
+.e-seat-color-ac {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background: #4D4D4D;
+}
+
+.e-seat-color-ac2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background: #01AEB0;
+
+}
+
+.rsredit-seat-reserved {
+    background: #A2A2A2;
+    color: #A2A2A2;
+}
+
+.rsredit-seat-selected {
+    background: #01AEB0;
+    color: #FCFCFC;
+}
+
+.rsredit-my-seat {
+background-color: #4D4D4D !important;
+color : #FCFCFC;
+}
+
+@media(min-width : 650px) {
+
+    .pick-possible>p,
+    .pick-already-complete>p {
+        font-size: 15px;
+    }
+}
+
+@media(min-width:1024px) {
+
+}
+
+
+@media (min-width : 1250px) and (max-width : 1400px) {
+    .seat-mobile-ct {
+        width: 500px;
+    }
+
+    .pick-possible>p:nth-child(1),
+    .pick-already-complete>p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 20px;
+    }
+}
+
+@media(min-width : 1650px) {
+
+
+    .pick-seat-ct {
+        gap : 20px;
+        width : 700px;
+    }
+
+    .pick-possible>p:nth-child(1),
+    .pick-already-complete>p:nth-child(1) {
+        font-size: 30px;
+    }
+
+    .pick-possible>p:nth-child(2),
+    .pick-already-complete>p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    .seat-color-pp,
+    .seat-color-ac,
+    .seat-color-ac2,
+    .e-seat-color-pp,
+    .e-seat-color-ac,
+    .e-seat-color-ac2 {
+        width: 30px;
+        height: 30px;
+    }
+
+}

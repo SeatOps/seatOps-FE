@@ -1,0 +1,110 @@
+.form_ct {
+    margin: 0 123px 0 127px;
+}
+
+.form_ct>div {
+    display: flex;
+    align-items: flex-start;
+    /* 여러 줄일 때 상단 정렬 */
+    padding: 34px 0 40px 0;
+    border-bottom: 1px solid #A2A2A2;
+}
+
+.form_ct>div:first-of-type {
+    padding: 7px 0 40px 0 !important;
+}
+
+.form_ct>div:last-of-type {
+    border-bottom: 0px !important;
+}
+
+.form_ct>div>label {
+    width: 114px;
+    margin-top: 25px;
+    /* input 높이에 맞춰 라벨 위치 조정 */
+    color: #4D4D4D;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 핵심: 입력창과 버튼을 감싸는 컨테이너 */
+.select_input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+/* 각 행(Row) 설정 */
+.select_input>div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* 버튼을 제외한 입력 요소들이 들어가는 곳 */
+.select_input select,
+.input_group {
+    flex: 1;
+    /* 버튼을 제외한 나머지 너비를 모두 차지 */
+    display: flex;
+    gap: 10px;
+}
+
+.select_input select,
+.select_input input {
+    width: 100%;
+    height: 77px;
+    padding: 0 14px;
+    border: 1px solid #A2A2A2;
+    background: #FCFCFC;
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-weight: 500;
+    box-sizing: border-box;
+    /* 패딩 포함 너비 계산 */
+}
+
+.select_input option {
+    color: #292929;
+}
+
+
+
+.select_input select {
+    /* 화살표 커스텀 (상단과 동일) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23292929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: calc(100% - 20px) center;
+    /* 작은 박스는 10px 정도가 적당합니다 */
+}
+
+/* 우측 버튼 스타일 고정 */
+.select_input button {
+    margin-left: 57px;
+    width: 164px;
+    height: 54px;
+    flex-shrink: 0;
+    /* 너비 고정 */
+    border-radius: 30px;
+    background: #757575;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.select_input button:hover {
+    background: #5a5a5a;
+}
+
+.modi_btn {
+    background: #D8D8D8 !important;
+}

@@ -1,0 +1,122 @@
+.signup-modal-ct {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.local-signup-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 완벽 중앙! */
+    background: #FCFCFC;
+    padding: 32px 24px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    height: 130px;
+    border: 1px solid #2C8FFF;
+    box-shadow: 0 0 10px 0 rgba(44, 143, 255, 0.50);
+}
+
+.local-signup-overlay>p {
+    color: #4D4D4D;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+    margin: 0 auto;
+    /* margin-top: 20px; */
+    width: 100%;
+}
+
+.local-signup-overlay>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 완벽 중앙! */
+    width: 260Px;
+    height: 1px;
+    background-color: #A2A2A2;
+    margin-top: 20px;
+}
+
+.signup-modal-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #2C8FFF;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #FCFCFC;
+    border: none;
+    margin-top: 40px;
+}
+
+@media (min-width : 700px) and (max-width : 1439px) {
+
+    .local-signup-overlay {
+        width: 600px;
+        height: 280px;
+    }
+
+    .local-signup-overlay>p {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .local-signup-overlay>div {
+        width: 550px;
+        height: 1px;
+        /* margin-top: 50px; */
+    }
+
+    .signup-modal-btn {
+        top: 65%;
+        font-size: 24px;
+
+    }
+
+}
+
+@media (min-width : 1440px) {
+
+    .local-signup-overlay {
+        width: 800px;
+        height: 280px;
+    }
+
+    .local-signup-overlay>p {
+        font-size: 30px;
+        margin-top : 40px;
+    }
+
+    .local-signup-overlay>div {
+        width: 750px;
+        height: 1px;
+        /* margin-top: 50px; */
+        top : 60%;
+    }
+
+    .signup-modal-btn {
+        font-size: 24px;
+        top: 70%;
+    }
+
+}

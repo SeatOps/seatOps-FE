@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.media-ct {
+    min-width: 320px;
+    max-width: 1024px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (min-width : 1024px) {
+    .media-ct {
+        min-width: 1024px;
+        max-width: 2560px;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+}
+
+
+.desktop-ct {
+    display: none;
+}
+
+/* SeatLayout.css */
+.reservation-total-ct {
+    display: flex;
+}
+
+.lecture-inf {
+    display: none;
+
+}

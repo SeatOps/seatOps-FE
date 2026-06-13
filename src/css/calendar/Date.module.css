@@ -1,0 +1,30 @@
+.date_ct,
+.select_ct {
+    width: 63px;
+    height: 42px;
+    padding: 0 13px 0 13px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pretendard';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    box-sizing: border-box;
+
+}
+
+
+.date_ct {
+    background: #FCFCFC;
+    color: #4D4D4D;
+
+}
+
+.select_ct {
+    background: #01AEB0;
+    color: #FFF;
+}

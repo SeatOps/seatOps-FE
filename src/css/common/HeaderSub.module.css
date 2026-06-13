@@ -1,0 +1,146 @@
+.sub_h_ct {
+    display: flex;
+
+    width: 100%;
+    height: 104px;
+    background: #01AEB0;
+    color: #FFF;
+    font-family: 'Pretendard';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: fixed;
+    top: 0;
+    padding: 49px 25px 26px 28px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.sub_h_ct>img {
+    margin-top: 5px;
+}
+
+.sub_title {
+    display: flex;
+    margin: 30px 123px 20px 122px;
+    justify-content: space-between;
+}
+
+.sub_title>p {
+    color: #01AEB0;
+    font-family: 'Pretendard';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sub_title>div {
+    display: flex;
+    gap: 15px;
+}
+
+.sub_title button {
+    width: 120px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #757575;
+    font-family: 'Pretendard';
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.sub_header_reserve {
+    width: 100%;
+    border-bottom: 1.5px solid #CFD8DC;
+    display: flex;
+
+}
+
+.sub_header_reserve>div {
+    color: #757575;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0 0 51px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.active_header {
+    border-bottom: 4px solid #01AEB0;
+}
+
+.reserve,
+.detail {
+    display: flex;
+
+    height: 40px;
+    position: absolute;
+    border: 1px solid #CFD8DC;
+    background: #FCFCFC;
+    justify-content: center;
+    gap: 15px;
+
+    align-items: center;
+    color: #A2A2A2;
+    font-family: 'Pretendard';
+
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 999;
+}
+
+.reserve {
+    width: 240px;
+    left: 530px;
+    top: 220px;
+}
+
+.detail {
+    top: 220px;
+    width: 400px;
+    left: 351px;
+}
+
+.underline {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 5%;
+
+    text-underline-offset: 25%;
+    text-underline-position: from-font;
+}
+
+@media screen and (min-width: 1024px) {
+    .sub_h_ct {
+        display: none;
+    }
+}
+
+@media (min-width : 1920px) {
+    .reserve {
+        width: 240px;
+        left: 530px;
+        top: 273px;
+    }
+
+    .detail {
+        top: 273px;
+        width: 400px;
+        left: 351px;
+    }
+}

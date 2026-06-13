@@ -1,0 +1,174 @@
+.signup-complete-ct {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 200px;
+}
+
+.complete-title {
+    display: none;
+}
+
+.complete-check-img-ct {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.complete-check-img-ct img:first-child {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.completecheck-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.complete-message {
+    color: #01AEB0;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin-top: 14px;
+}
+
+.complete-message2 {
+    color: #A2A2A2;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.complete-inf-message {
+    color: #292929;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.complete-inf-message>span {
+    color: #01AEB0;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: rgba(1, 174, 176, 0.3);
+}
+
+.complete-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 81px;
+    background: #01AEB0;
+
+    color: #FCFCFC;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+@media (min-width:1024px) {
+
+    /* 회원가입 완료 화면 ct */
+    .signup-complete-ct {
+        width: 80%;
+        margin-bottom: 0px;
+    }
+
+    /* 시대원 학원 회원가입 문구 설정 */
+    .complete-title {
+        color: #424C5E;
+        font-family: 'Pretendard';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 102px 0px 41px 0px;
+    }
+
+    /* 회원가입 체크표시 설정 컨테이너 */
+    .complete-check-img-ct {
+        width: 100%;
+        height: 100px;
+        margin: 0px;
+    }
+
+    /* 첫번째 이미지 설정 */
+    .complete-check-img-ct img:first-child {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 두번째 이미지 설정 첫번째 이미지의 중앙으로 오도록    */
+
+    /* 회원가입 완료 메시지 설정 */
+    .complete-message {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .complete-message2 {
+        font-size: 20px;
+    }
+
+    /* 이름(출결번호) 회원가입이 성공적으로 완료되었습니다 문구 설정*/
+    .complete-inf-message {
+        font-size: 36px;
+        margin-top: 17px;
+    }
+
+    /* 이름(출결번호) 굵게 설정 */
+    .complete-inf-message>span {
+        font-size: 36px;
+    }
+
+    /* 로그인 바로하기 버튼 설정 */
+    .complete-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        background: #01AEB0;
+        height: 75px;
+
+        color: #FCFCFC;
+        text-align: center;
+        font-family: 'Pretendard';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        margin-top: 102px;
+        position: relative;
+        margin-bottom: 87px;
+    }
+
+}
