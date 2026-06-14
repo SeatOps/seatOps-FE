@@ -1,6 +1,6 @@
-import Header from "../../components/common/Header.jsx";
-import ReservationForm from "../../components/admin/ReservationForm.jsx";
-import ManageReserveHeader from "../../components/admin/ManageReserveHeader.jsx";
+import Header from "../../../components/common/Header.jsx";
+import ReservationForm from "../../../components/admin/ReservationForm.jsx";
+import ManageReserveHeader from "../../../components/admin/ManageReserveHeader.jsx";
 import scroll from "../../css/common/scroll.module.css"
 
 function ManagerRsvRegi() {

@@ -1,11 +1,11 @@
-import Header from "../../components/common/Header";
-import ManageReserveHeader from "../../components/admin/ManageReserveHeader";
+import Header from "../../../components/common/Header";
+import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
 import rsvInfo from "../../css/admin/RsvInfo.module.css";
-import Modal from "../../components/common/Modal";
+import Modal from "../../../components/common/Modal";
 import { useState, useEffect } from "react";
-import { authAPI } from '../../components/common/apiClient';
+import { authAPI } from '../../../components/common/apiClient';
 import classModi from '../../css/admin/ClassModi.module.css';
-import TwoBtnModal from "../../components/admin/TwoBtnModal";
+import TwoBtnModal from "../../../components/admin/TwoBtnModal";
 import scroll from "../../css/common/scroll.module.css";
 import { useLocation } from "react-router-dom";
 
