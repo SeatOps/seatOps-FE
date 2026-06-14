@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/common/Header";
+import Header from "../../../components/common/Header";
 import { useNavigate, useLocation } from "react-router-dom";
 import '../../css/lecture/ReservationPg.css'
 import '../../css/lecture/ReservationModal.css'
@@ -8,10 +8,10 @@ import '../../css/lecture/ReservationMEdit.css'
 import MobileProfileimg from '../../img/mobile-profile.svg'
 import MobileBackbtn from '../../img/backbtn.svg'
 import reservationLogo from '../../img/reservation-logo-img.svg'
-import { authAPI } from "../../components/common/apiClient"
-import Navigation from "../../components/common/Navigate";
-import TwoBtnModal from "../../components/admin/TwoBtnModal";
-import Modal from "../../components/common/Modal";
+import { authAPI } from "../../../components/common/apiClient"
+import Navigation from "../../../components/common/Navigate";
+import Modal from "../../../components/common/Modal";
+import TwoBtnModal from "../../../components/admin/TwoBtnModal";
 
 // 좌석 배치 설정
 const Row_seat_chart = [
@@ -34,7 +34,7 @@ const Row_seat_chart = [
     { id: 17, seatCount: 7 },
 ];
 
-const ReservationMEdit = () => {
+const ReservationMRegi = () => {
     const [selectedSeat, setSelectedSeat] = useState([]);
     const [loading, setLoading] = useState(false);
     const [lectureData, setLectureData] = useState(null);
@@ -43,83 +43,36 @@ const ReservationMEdit = () => {
 
     // 모달 상태 (3가지 타입)
     const [modalType, setModalType] = useState(null); // 'already' | 'success' | 'no-seat' | null
-    // 📌 새로 추가: 백엔드 에러 메시지 상태
-    const [errorMessage, setErrorMessage] = useState(null);
 
     const navigate = useNavigate();
-    const { movehome, movereservationRegiInfo, movemanageclassmodi } = Navigation();
+    const { movehome } = Navigation();
     const location = useLocation();
 
     // lectureId 가져오기
     const datas = location.state?.data || {};
-    const lectureId = datas?.lectureId
 
-    // ✅ 정확한 좌석 번호 파싱 함수
-    const parseSeatNumber = (seatString) => {
-        if (!seatString) return null;
-        const match = seatString.match(/(\d+호-)?(\d+)/);
-        return match ? parseInt(match[2], 10) : null;
-    };
 
     // 페이지 로드시 강의실 정보 및 좌석 상태 조회
     useEffect(() => {
         const fetchLectureInfo = async () => {
             try {
                 setInitialLoading(true);
-
-                console.log("🚀 API 호출: getLectureInfo(", lectureId, ")");
-                const response = await authAPI.getLectureInfo(lectureId);
-
-                console.log("✅ API 응답 받음");
-                setLectureData(response.data);
-
-                // ✅ 정확한 예약좌석 파싱
-                const reserved = response.data.seats
-                    ?.filter(seat => seat.status === "RESERVED")
-                    ?.map(seat => {
-                        const seatNum = parseSeatNumber(seat.seatNumber);
-                        if (seatNum !== null) {
-                            console.log(`🔒 예약좌석 파싱: ${seat.seatNumber} → ${seatNum}`);
-                        }
-                        return seatNum;
-                    })
-                    ?.filter(num => num !== null) || [];
-
-                console.log("📋 최종 reservedSeats 배열:", reserved);
-                setReservedSeats(reserved);
-
-                const blocked = response.data.seats
-                    ?.filter(seat => seat.status === "BLOCKED")
-                    ?.map(seat => {
-                        const seatNum = parseSeatNumber(seat.seatNumber);
-                        if (seatNum !== null) {
-                            console.log(`🔒 예약좌석 파싱: ${seat.seatNumber} → ${seatNum}`);
-                        }
-                        return seatNum;
-                    })
-                    ?.filter(num => num !== null) || [];
-
-                console.log("📋 최종 blockedSeats 배열:", blocked);
-                setSelectedSeat(blocked);
+                const datas = location.state?.data || {};
+                setLectureData(datas);
 
             } catch (error) {
-                console.error("❌ 강의 정보 조회 실패:", error);
+                console.error("강의 정보 조회 실패:", error);
                 alert("강의 정보를 불러오는데 실패했습니다.");
             } finally {
                 setInitialLoading(false);
-                console.log("🏁 데이터 로딩 완료!");
             }
         };
 
-        if (lectureId) {
-            fetchLectureInfo();
-        } else {
-            console.error("❌ lectureId가 없습니다!");
-            setInitialLoading(false);
-        }
-    }, [lectureId]);
+        fetchLectureInfo();
+    }, []);
 
     let currentSeatNumber = 1;
+
 
     // 1. 다중 선택을 위한 클릭 핸들러 수정
     const handleSeatClick = (seatNo) => {
@@ -166,22 +119,11 @@ const ReservationMEdit = () => {
         });
     };
 
-    //삭제하기 버튼 클릭 시
-    const handleDelete = async () => {
-        try {
-            await authAPI.deleteclassreservation(lectureId);
-        } catch (error) {
-            console.error(error);
-            alert(
-                error.response?.data?.message ||
-                "강의 삭제 중 오류가 발생했습니다. 다시 시도해 주세요."
-            );
-        }
-    }
 
-    // 📌 수정: 백엔드 message를 모달로 표시하는 handleEdit
-    const handleEdit = async () => {
-        const blockedSeatNumbers = selectedSeat.map((seat) => `${datas.classroomNum}-${seat}`);
+    //등록하기 버튼 클릭 시
+    const handleRegi = async () => {
+
+        const blockedSeatNumbers = selectedSeat.map((seat) => `${datas.classroomName}-${seat}`);
 
         // 2. 서버가 요구하는 데이터 구조 생성
         const requestData = {
@@ -196,38 +138,31 @@ const ReservationMEdit = () => {
         };
 
         console.log("최종 전송 데이터:", requestData);
+
         try {
-            const response = await authAPI.editclassreservation(lectureId, requestData);
-            setModalType("success");
+            const response = await authAPI.lectureRegi(requestData);
+            setModalType("success")
+
         } catch (error) {
-            console.error("❌ 에러 응답:", error.response?.data);
-            
-            // 백엔드에서 message 필드가 오는 경우
-            if (error.response?.data?.message) {
-                setErrorMessage(error.response.data.message);
-            } 
-            // 기존 특정 메시지 처리
-            else if (error.response?.data === "예약자가 존재합니다. 삭제 후 다시 시도해주세요.") {
-                setErrorMessage("예약자가 존재합니다. 삭제 후 다시 시도해주세요.");
-            } 
-            // 기본 에러 메시지
-            else {
-                setErrorMessage(
-                    error.response?.data?.message ||
-                    "강의 수정 중 오류가 발생했습니다. 다시 시도해 주세요."
-                );
-            }
+            console.error(error.response.data)
+
+
+            alert(
+                error.response?.data?.message ||
+                "강의 수정 중 오류가 발생했습니다. 다시 시도해 주세요."
+            )
+
+
         }
     }
 
-    // 수정: 모달 닫기 (errorMessage도 리셋)
+    // 모달 닫기
     const closeModal = () => {
         // 성공 모달이면 홈으로 이동
         if (modalType === "success") {
-            movehome()
+            movehome();
         }
         setModalType(null);
-        setErrorMessage(null); 
     };
 
     if (initialLoading) {
@@ -240,7 +175,7 @@ const ReservationMEdit = () => {
     }
 
     return (
-        <div className="media-ct">
+        <div className="media-c term-all-scroll-ct">
             <Header />
             <nav className="reservation-top-ct">
                 <img src={MobileBackbtn} alt="모바일 뒤로가기 이미지" />
@@ -250,7 +185,7 @@ const ReservationMEdit = () => {
 
             <div className="reservation-total-ct">
                 <div className="reservation-scroll-ct">
-                    <p className="lecture-inf"> 예약 불가 자리 지정(복수 선택 가능) </p>
+                    <p className="lecture-inf"> 강좌 정보 </p>
 
                     <section className="rsr-ct">
                         {/* 상단(음향, 칠판, 교탁) */}
@@ -291,6 +226,7 @@ const ReservationMEdit = () => {
                                     </div>
                                 );
                             })}
+
                             <div className="seat-mobile-ct">
                                 <section className="pick-seat-ct">
                                     <div className="pick-possible">
@@ -305,6 +241,7 @@ const ReservationMEdit = () => {
                                 </section>
                             </div>
                         </div>
+
                     </section>
                 </div>
 
@@ -338,84 +275,50 @@ const ReservationMEdit = () => {
                     <button
                         className='rsr-back-btn'
                         type="button"
-                        onClick={() => { setModalType("prev") }}
+                        onClick={() => { setModalType("back") }}
                     >
                         이전
                     </button>
                     <button
-                        className='rsr-delete-btn'
-                        type="button"
-                        onClick={() => { setModalType("delete") }}
-                    >
-                        삭제하기
-                    </button>
-                    <button
                         className='rsr-edit-btn'
                         type="button"
-                        onClick={handleEdit}
+                        onClick={handleRegi}
                     >
-                        수정완료
+                        등록하기
                     </button>
                 </div>
             </div>
 
+            {/* 모달 공통 레이아웃 */}
             {modalType && (
                 <div className="reservation-modal-ct">
-                    {modalType === "delete" && (
+                    {modalType === "back" && (
                         <TwoBtnModal
-                            text="정말로 삭제하시겠습니까?"
+                            text={"등록되지 않았습니다. \n나가시겠습니까?"}
                             btn1T="네"
                             btn2T="아니오"
                             btn1E={() => {
                                 closeModal();
-                                handleDelete();
-                                setModalType("deleteCheck");
+                                movehome()
                             }}
                             btn2E={closeModal}
                         />
                     )}
-
-                    {modalType === "deleteCheck" && (
-                        <Modal text="삭제되었습니다." event={() => {
+                    {modalType === "error" && (
+                        <Modal text={"예약자가 존재합니다.\n예약자 삭제 후 다시 시도해주세요."} event={() => {
                             closeModal();
-                            movereservationRegiInfo();
                         }} />
                     )}
-
                     {modalType === "success" && (
-                        <Modal text="수정 완료되었습니다." event={() => {
+                        <Modal text="등록 완료되었습니다." event={() => {
                             closeModal();
-                            movereservationRegiInfo();
                         }} />
                     )}
 
-                    {modalType === "prev" && (
-                        <TwoBtnModal
-                            text={"수정사항이 저장되지 않습니다.\n되돌아가시겠습니까?"}
-                            btn1T="네"
-                            btn2T="아니오"
-                            btn1E={() => {
-                                closeModal();
-                                movemanageclassmodi()
-                            }}
-                            btn2E={closeModal}
-                        />
-                    )}
-                </div>
-            )}
-
-            {errorMessage && (
-                <div className="reservation-modal-ct">
-                    <Modal 
-                        text={errorMessage} 
-                        event={() => {
-                            setErrorMessage(null);
-                        }} 
-                    />
                 </div>
             )}
         </div>
     );
 };
 
-export default ReservationMEdit;
+export default ReservationMRegi;

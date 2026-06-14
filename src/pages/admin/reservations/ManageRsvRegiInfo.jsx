@@ -1,15 +1,15 @@
-import Header from "../../components/common/Header";
-import ManageHeaderSub from "../../components/admin/ManageHeaderSub";
+import Header from "../../../components/common/Header";
+import ManageHeaderSub from "../../../components/admin/ManageHeaderSub";
 import rsvRegiInfo from "../../css/admin/RsvRegiInfo.module.css";
-import ClassCtManage from "../../components/admin/ClassCtManage";
-import ManageReserveHeader from "../../components/admin/ManageReserveHeader";
+import ClassCtManage from "../../../components/admin/ClassCtManage";
+import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
 import { useEffect, useState } from "react"; // ⭐️ useState 훅을 가져옵니다.
-import Navigation from "../../components/common/Navigate";
-import { authAPI } from "../../components/common/apiClient";
-import Pagination from "../../components/admin/Pagination";
+import Navigation from "../../../components/common/Navigate";
+import { authAPI } from "../../../components/common/apiClient";
+import Pagination from "../../../components/admin/Pagination";
 import scroll from "../../css/common/scroll.module.css";
 import { useLocation } from "react-router-dom";
-import Pagination2 from "../../components/admin/Pagination2";
+import Pagination2 from "../../../components/admin/Pagination2";
 
 
 function ManagerRsvRegiInfo() {
@@ -60,17 +60,8 @@ function ManagerRsvRegiInfo() {
                     <ManageReserveHeader page={"reservation"} />
                     <section className={scroll.scroll_section}>
                         <ManageHeaderSub text="예약등록정보" button="등록하기" onButtonClick={movereservationRegi} />
-                        <div className={rsvRegiInfo.class_ct}>
-                            {lectureList.length > 0 ? (
-                                lectureList.map((lecture) => (
-                                    <ClassCtManage key={lecture.lectureId} lectureData={lecture} />
-                                ))
-                            ) : (
-                                <p>등록된 예약 정보가 없습니다.</p>
-                            )}
-                        </div>
 
-
+                        <ReservationsList lectureList={lectureList} />
 
                         <Pagination page={page} setPage={setPage} totalPages={totalPages} />
                         {/* <Pagination2 page={page} setPage={setPage} pages={pages} /> */}
