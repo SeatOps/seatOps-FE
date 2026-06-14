@@ -8,6 +8,8 @@ import classModi from '../../css/admin/ClassModi.module.css';
 import TwoBtnModal from "../../../components/admin/TwoBtnModal";
 import scroll from "../../css/common/scroll.module.css";
 import { useLocation } from "react-router-dom";
+import InstructorEdit from "./InstructorEdit";
+import ClassroomEdit from "./ClassroomEdit";
 
 function ClassInfoModi() {
     const location = useLocation();
@@ -228,86 +230,13 @@ function ClassInfoModi() {
 
                 <section className={classModi.form_ct}>
                     {/* 과목명 섹션 */}
-                    <div>
-                        <label>과목명</label>
-                        <div className={classModi.select_input}>
-                            <div>
-                                <select onChange={(e) => setSubject(e.target.value)} value={subject}>
-                                    {subjectList.map((s) => (
-                                        <option key={s.id} value={s.id}>{s.name}</option>
-                                    ))}
-                                </select>
-                                <button
-                                    className={subjectInput ? classModi.modi_btn : ""}
-                                    onClick={() => subjectInput ? clickModal(setSubjectModal) : clickModi(subjectInput, setSubjectInput)}>
-                                    {subjectInput ? "삭제하기" : "수정하기"}
-                                </button>
-                            </div>
-                            {subjectInput && (
-                                <div>
-                                    <div className={classModi.input_group}>
-                                        <input placeholder="과목명 입력" type="text" value={modiSubject} onChange={(e) => setModiSubject(e.target.value)} />
-                                    </div>
-                                    <button onClick={fetchModiSubject}>수정완료</button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    <ClassNameEidt subjectList={subjectList} setSubject={setSubject} subject={subject} subjectInput={subjectInput} setSubjectModal={setSubjectModal} clickModal={clickModal} setSubjectInput={setSubjectInput} modiSubject={modiSubject} setModiSubject={setModiSubject} fetchModiSubject={fetchModiSubject} />
 
                     {/* 강사 섹션 */}
-                    <div>
-                        <label>강사</label>
-                        <div className={classModi.select_input}>
-                            <div>
-                                <select onChange={(e) => setInstructor(e.target.value)} value={instructor}>
-                                    {instructorList.map((i) => (
-                                        <option key={i.id} value={i.id}>{i.name}</option>
-                                    ))}
-                                </select>
-                                <button
-                                    className={instructorInput ? classModi.modi_btn : ""}
-                                    onClick={() => instructorInput ? clickModal(setInstructorModal) : clickModi(instructorInput, setInstructorInput)}>
-                                    {instructorInput ? "삭제하기" : "수정하기"}
-                                </button>
-                            </div>
-                            {instructorInput && (
-                                <div>
-                                    <div className={classModi.input_group}>
-                                        <input placeholder="강사명 입력" type="text" value={modiInstructor} onChange={(e) => setModiInstructor(e.target.value)} />
-                                    </div>
-                                    <button onClick={fetchModiInstructor}>수정완료</button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    <InstructorEdit instructorList={instructorList} setInstructor={setInstructor} instructor={instructor} instructorInput={instructorInput} clickModal={clickModal} setInstructorModal={setInstructorModal} setInstructorInput={setInstructorInput} modiInstructor={modiInstructor} setModiInstructor={setModiInstructor} fetchModiInstructor={fetchModiInstructor} />
 
                     {/* 강의실 섹션 */}
-                    <div>
-                        <label>강의실</label>
-                        <div className={classModi.select_input}>
-                            <div>
-                                <select onChange={(e) => setClassroom(e.target.value)} value={classroom}>
-                                    {classroomList.map((c) => (
-                                        <option key={c.id} value={c.id}>{c.classroomNum} (좌석: {c.totalSeat})</option>
-                                    ))}
-                                </select>
-                                <button
-                                    className={classroomInput ? classModi.modi_btn : ""}
-                                    onClick={() => classroomInput ? clickModal(setClassroomModal) : clickModi(classroomInput, setClassroomInput)}>
-                                    {classroomInput ? "삭제하기" : "수정하기"}
-                                </button>
-                            </div>
-                            {classroomInput && (
-                                <div>
-                                    <div className={classModi.input_group}>
-                                        <input placeholder="강의실 입력" type="text" value={modiClassroom} onChange={(e) => setModiClassroom(e.target.value)} />
-                                        <input placeholder="좌석 수" type="number" value={modiSeat} onChange={(e) => setModiSeat(e.target.value)} />
-                                    </div>
-                                    <button onClick={fetchModiClassroom}>수정완료</button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    <ClassroomEdit setClassroom={setClassroom} classroomList={classroomList} classroomInput={classroomInput} setClassroomModal={setClassroomModal} setClassroomInput={setClassroomInput} modiClassroom={modiClassroom} modiSeat={modiSeat} setModiClassroom={setModiClassroom} setModiSeat={setModiSeat} fetchModiClassroom={fetchModiClassroom} clickModal={clickModal} />
                 </section>
 
                 {/* 모달 컴포넌트들 */}

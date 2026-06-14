@@ -8,6 +8,8 @@ import Header from '../../components/common/Header.jsx';
 import ClassCtApply from '../../components/main/ClassCtApply.jsx';
 import Navigation from '../../components/common/Navigate.jsx';
 import Modal from '../../components/common/Modal.jsx';
+import ReservationList from './ReservationList.jsx';
+import ReservationDateSelector from './ReservationDateSelector.jsx';
 
 
 
@@ -75,22 +77,6 @@ function ClassApply() {
 
     }, []);
 
-    //클릭값 가져오기
-    const clickDate = (day) => {
-
-        setSelectedDay(day)
-        const selectClassDate = classData.filter((classTime) => {
-            const lectureDay = Number(classTime.startTime.slice(8, 10));
-
-            return lectureDay === day;
-        });
-        setSelectLectureId("")
-
-
-        setSelectData(selectClassDate);
-    }
-
-
 
     return (
         <div className={scroll.scroll}>
@@ -103,35 +89,8 @@ function ClassApply() {
                     <p>계속하시려면<br />화면을 세로로 돌려주세요.</p>
                     <div></div>
                 </section>
-                <section className={classA.select_date_ct}>
-                    <p>날짜</p>
-                    <div>
-                        {calenderInfo.map((i, index) => (
-                            <Dates
-                                key={index}
-                                month={i.month}
-                                day={i.date}
-                                clickDate={() => clickDate(i.date)}
-                                isSelected={selectedDay === i.date} />
-                        ))}
-
-                    </div>
-                </section>
-
-                {selectData.length > 0 ? (
-                    <section className={classA.classes_ct}>
-                        {selectData.map((lecture) => (
-                            <ClassCtApply
-                                key={lecture.lectureId}
-                                lectureData={lecture}
-                                setSelectLectureId={setSelectLectureId}
-                                selectLectureId={selectLectureId}
-                            />
-                        ))}
-                    </section>
-                ) : (
-                    <p className={classA.classes_p}>해당 날짜에 등록된 강의가 없습니다.</p>
-                )}
+                <ReservationDateSelector calenderInfo={calenderInfo} selectedDay={selectedDay} setSelectedDay={setSelectedDay} classData={classData} setSelectLectureId={setSelectLectureId} setSelectData={setSelectData} />
+                <ReservationList selectData={selectData} setSelectLectureId={setSelectLectureId} selectLectureId={selectLectureId} />
 
                 <button className={classA.book_button} onClick={() => selectLectureId ? (reservationpg(selectLectureId)) : (setIsModal(true))}>
                     예약하기
