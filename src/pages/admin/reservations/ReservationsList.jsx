@@ -1,5 +1,5 @@
 import ClassCtManage from "../../../components/admin/ClassCtManage";
-import rsvRegiInfo from "../../css/admin/RsvRegiInfo.module.css";
+import rsvRegiInfo from "../../../css/admin/RsvRegiInfo.module.css";
 
 
 function ReservationsList({ lectureList }) {

@@ -1,5 +1,5 @@
-import rsvRegi from '../../css/admin/RsvRegi.module.css'
-import HeadSub from '../../css/common/HeaderSub.module.css';
+import rsvRegi from '../../../css/admin/RsvRegi.module.css'
+import HeadSub from '../../../css/common/HeaderSub.module.css';
 
 
 function LectureInfo({ classInfo, movereservationRegiInfo, movemanageclassmodi }) {

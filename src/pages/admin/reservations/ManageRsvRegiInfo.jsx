@@ -1,13 +1,13 @@
 import Header from "../../../components/common/Header";
 import ManageHeaderSub from "../../../components/admin/ManageHeaderSub";
-import rsvRegiInfo from "../../css/admin/RsvRegiInfo.module.css";
+import rsvRegiInfo from "../../../css/admin/RsvRegiInfo.module.css";
 import ClassCtManage from "../../../components/admin/ClassCtManage";
 import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
 import { useEffect, useState } from "react"; // ⭐️ useState 훅을 가져옵니다.
 import Navigation from "../../../components/common/Navigate";
 import { authAPI } from "../../../components/common/apiClient";
 import Pagination from "../../../components/admin/Pagination";
-import scroll from "../../css/common/scroll.module.css";
+import scroll from "../../../css/common/scroll.module.css";
 import { useLocation } from "react-router-dom";
 import Pagination2 from "../../../components/admin/Pagination2";
 

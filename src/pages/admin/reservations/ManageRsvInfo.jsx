@@ -1,14 +1,14 @@
 import Header from "../../../components/common/Header";
-import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import rsvInfo from "../../../css/admin/RsvInfo.module.css"
 import ReservationInfo from "../../../components/admin/ReservationInfo";
-import search from '../../img/search.svg';
+import search from '../../../img/search.svg';
 import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
 import { useState, useEffect } from "react";
 import { authAPI } from "../../../components/common/apiClient";
-import scroll from "../../css/common/scroll.module.css"
+import scroll from "../../../css/common/scroll.module.css"
 
-import sortUp from "../../img/sort-up.svg"
-import sortDown from "../../img/sort-down.svg"
+import sortUp from "../../../img/sort-up.svg"
+import sortDown from "../../../img/sort-down.svg"
 import ReservationsBookers from "./ReservatiosBookers";
 
 function ManagerRsvInfo() {

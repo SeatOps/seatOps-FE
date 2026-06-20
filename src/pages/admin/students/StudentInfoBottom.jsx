@@ -1,4 +1,4 @@
-import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import rsvInfo from "../../../css/admin/RsvInfo.module.css"
 
 function StudentInfoBottom({ setSortBy, togleSort, userInfoList, handleDeleteUser }) {
     return (

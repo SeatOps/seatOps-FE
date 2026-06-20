@@ -1,13 +1,13 @@
-import rsvRegi from '../../css/admin/RsvRegi.module.css'
+import rsvRegi from '../../../css/admin/RsvRegi.module.css'
 import DateShow from '../../../components/admin/DateShow';
 import TimeShow from '../../../components/admin/TimeShow';
 import Header from '../../../components/common/Header';
 import { useState, useEffect } from 'react';
 import { authAPI } from '../../../components/common/apiClient';
-import HeadSub from '../../css/common/HeaderSub.module.css';
+import HeadSub from '../../../css/common/HeaderSub.module.css';
 import Navigation from '../../../components/common/Navigate';
 import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
-import scroll from "../../css/common/scroll.module.css"
+import scroll from "../../../css/common/scroll.module.css"
 import LectureInfo from './LectureInfo';
 
 
