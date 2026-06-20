@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { authAPI } from '../../../components/common/apiClient';
 import scroll from "../../css/common/scroll.module.css"
 import { useLocation } from "react-router-dom";
+import ClassNameRegister from "./ClassNameRegister";
 
 
 
@@ -115,44 +116,9 @@ function ClassInfoRegi() {
                     <p>과목명 / 강사 / 강의실 등록</p>
                 </div>
                 <section className={classRegi.form_ct}>
-                    <div>
-                        <label>과목명</label>
-                        <input
-                            required
-                            placeholder="과목명 입력"
-                            type="text"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)} />
-                        <button type="button" onClick={() => { handlesubject() }}>등록하기</button>
-                    </div>
-                    <div>
-                        <label>강사</label>
-                        <input
-                            required
-                            placeholder="이름 입력"
-                            type="text"
-                            value={instructor}
-                            onChange={(e) => setInstructor(e.target.value)} />
-                        <button type="button" onClick={() => { handleinstructor() }}>등록하기</button>
-                    </div>
-                    <div>
-                        <label>강의실</label>
-                        <div>
-                            <input
-                                required
-                                placeholder="강의실 입력"
-                                type="text"
-                                value={classroom}
-                                onChange={(e) => setClassroom(e.target.value)} />
-                            <input
-                                required
-                                placeholder="좌석 수"
-                                type="number"
-                                value={seat}
-                                onChange={(e) => setSeat(e.target.value)} />
-                        </div>
-                        <button type="button" onClick={() => { handleclassroom() }}>등록하기</button>
-                    </div>
+                    <ClassNameRegister subject={subject} setSubject={setSubject} handlesubject={handlesubject} />
+                    <InstructorRegister instructor={instructor} setInstructor={setInstructor} handleinstructor={handleinstructor} />
+                    <ClassroomRegister setSeat={setSeat} setClassroom={setClassroom} handleclassroom={handleclassroom} classroom={classroom} seat={seat} />
                 </section>
                 {
                     onModal === true && (

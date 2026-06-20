@@ -11,7 +11,9 @@ import banner from "../../img/bannerLast.svg";
 import cafe from "../../img/cafe.svg";
 import classApplyBtn from "../../img/class-apply-btn.svg"
 import MobileHeader from '../../components/main/MobileHeader'
-import { useMediaQuery } from 'react-responsive';;
+import { useMediaQuery } from 'react-responsive'; import MyClassInfo from './MyClassInfo';
+import ReservationListHome from './ReservationListHome';
+;
 
 
 
@@ -113,38 +115,7 @@ function Home() {
         {isDesktop ? <Header /> : <MobileHeader />}
         <section className={`${hom.main_home_ct}`}>
           <div>
-            <div className={hom.my_class}>
-              <div className={hom.my_class_top}>
-                <p>내 강의 확인</p>
-              </div>
-
-              {/* 강의 정보 없음 */}
-              <div className={`${NoneClass} ${hom.none_class}`}>
-                <p>강의 정보가 없습니다.</p>
-                <button onClick={moveclassaply}>강의 신청 바로가기</button>
-              </div>
-
-              {/* 강의 정보 있음 */}
-              <div className={`${hom.my_class_info} ${blockClass}`}>
-                <div className={hom.date_time_ct}>
-                  <p>{date}</p>
-                  <p>{time}</p>
-                  <div className={hom.gray_line}></div>
-                  <p className={hom.seat_num}>{seatNum}번</p>
-                </div>
-                <div className={hom.class_info_div}>
-                  <div className={hom.gray_ct}>수업명</div>
-                  <p>
-                    {myClassData.subjectName}
-                  </p>
-                </div>
-                <div>
-                  <div className={hom.gray_ct}>강사</div>
-                  <p>{myClassData.instructorName}</p>
-                </div>
-                <button onClick={movemypage}>강의 정보 확인하기</button>
-              </div>
-            </div>
+            <MyClassInfo NoneClass={NoneClass} blockClass={blockClass} moveclassaply={moveclassaply} date={date} time={time} seatNum={seatNum} myClassData={myClassData} movemypage={movemypage} />
 
             <div className={hom.my_class_web}>
               <img src={banner} />
@@ -161,28 +132,7 @@ function Home() {
 
             </div>
 
-            <section className={hom.home_bottom}>
-              <div className={hom.gray_hr}>
-                <div>수강정보</div>
-              </div>
-              <div className={hom.class_apply_app_ct}>
-                {classData.map((lecture) => (
-                  <ClassCt
-                    key={lecture.lectureId}
-                    lectureData={lecture}
-                  />
-                ))}
-              </div>
-              <div className={hom.class_apply_web_ct}>
-                {classData.map((lecture) => (
-                  <ClassCtWeb
-                    key={lecture.lectureId}
-                    lectureData={lecture}
-                    btnText="신청하기"
-                  />
-                ))}
-              </div>
-            </section>
+            <ReservationListHome classData={classData} />
           </div>
         </section>
       </div>
