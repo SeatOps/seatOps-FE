@@ -1,5 +1,5 @@
-import search from '../../img/search.svg';
-import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import search from '../../../img/search.svg';
+import rsvInfo from "../../../css/admin/RsvInfo.module.css"
 
 
 function StudentInfoTop({ handleSearch, searchNickname, setSearchNickname }) {

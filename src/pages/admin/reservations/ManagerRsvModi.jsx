@@ -1,7 +1,7 @@
 import Header from "../../../components/common/Header.jsx";
 import ManageReserveHeader from "../../../components/admin/ManageReserveHeader.jsx";
 import ReservationModi from "../../../components/admin/ReservationModi.jsx";
-import scroll from "../../css/common/scroll.module.css"
+import scroll from "../../../css/common/scroll.module.css"
 
 function ManagerRsvModi() {
     return (

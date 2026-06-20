@@ -1,4 +1,4 @@
-import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import rsvInfo from "../../../css/admin/RsvInfo.module.css"
 
 function ApprovalInfoBottom({ setSortBy, togleSort, handleDeleteUser, acessInfoList }) {
     return (

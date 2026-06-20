@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../../components/common/Header";
 import { useNavigate, useLocation } from "react-router-dom";
-import '../../css/lecture/ReservationPg.css'
-import '../../css/lecture/ReservationModal.css'
-import '../../css/lecture/ReservationEdit.css'
-import '../../css/lecture/ReservationMEdit.css'
-import MobileProfileimg from '../../img/mobile-profile.svg'
-import MobileBackbtn from '../../img/backbtn.svg'
-import reservationLogo from '../../img/reservation-logo-img.svg'
+import '../../../css/lecture/ReservationPg.css'
+import '../../../css/lecture/ReservationModal.css'
+import '../../../css/lecture/ReservationEdit.css'
+import '../../../css/lecture/ReservationMEdit.css'
+import MobileProfileimg from '../../../img/mobile-profile.svg'
+import MobileBackbtn from '../../../img/backbtn.svg'
+import reservationLogo from '../../../img/reservation-logo-img.svg'
 import { authAPI } from "../../../components/common/apiClient"
 import Navigation from "../../../components/common/Navigate";
 import TwoBtnModal from "../../../components/admin/TwoBtnModal";

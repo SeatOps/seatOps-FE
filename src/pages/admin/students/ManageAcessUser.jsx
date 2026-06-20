@@ -1,15 +1,15 @@
 import Header from "../../../components/common/Header";
-import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import rsvInfo from "../../../css/admin/RsvInfo.module.css"
 import AcessInfo from "../../../components/admin/AcessInfo";
 import { useState } from "react";
 import ManageReserveHeader from "../../../components/admin/ManageReserveHeader";
 import { useEffect } from "react";
 import { authAPI } from "../../../components/common/apiClient";
-import scroll from "../../css/common/scroll.module.css"
+import scroll from "../../../css/common/scroll.module.css"
 import { useLocation } from "react-router-dom";
 
-import sortUp from "../../img/sort-up.svg"
-import sortDown from "../../img/sort-down.svg"
+import sortUp from "../../../img/sort-up.svg"
+import sortDown from "../../../img/sort-down.svg"
 import ApprovalInfoTop from "./ApprovalInfoTop";
 
 function ManageAcessUser() {

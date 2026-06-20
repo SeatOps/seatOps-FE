@@ -5,6 +5,7 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 
 import './App.css';
 import './reset.css'
+import './css/common/reset.css'
 import Sidebar from './components/common/Sidebar.jsx'
 import Login from './pages/auth/Login.jsx';
 import SignUp from './pages/auth/SignUp.jsx';
@@ -14,9 +15,9 @@ import ClassApply from './pages/main/ClassApply.jsx';
 import TimeCheck from './pages/calendar/TimeCheck.jsx';
 import SignUpComplete from './pages/auth/SignUpComplete.jsx';
 import ReservationPg from './pages/lecture/ReservationPg.jsx';
-import ManagerRsvRegi from './pages/admin/ManagerRsvRegi.jsx';
-import ManagerRsvRegiInfo from './pages/admin/ManageRsvRegiInfo.jsx';
-import ManagerRsvInfo from './pages/admin/ManageRsvInfo.jsx';
+import ManagerRsvRegi from './pages/admin/reservations/ManagerRsvRegi.jsx';
+import ManagerRsvRegiInfo from './pages/admin/reservations/ManageRsvRegiInfo.jsx';
+import ManagerRsvInfo from './pages/admin/reservations/ManageRsvInfo.jsx';
 import TermConditionAgree from './pages/auth/Terms_Condition._Agree.jsx';
 
 import MyPage from './pages/mypage/MyPage.jsx';
@@ -33,17 +34,17 @@ import IdFind from './pages/auth/IdFind.jsx';
 import IdFind2 from './pages/auth/IdFind2.jsx';
 import PswRessting from './pages/auth/PswResetting.jsx';
 import PswChangeComplete from './pages/auth/PswChangeComplete.jsx';
-import ClassInfoRegi from './pages/admin/ClassInfoRegi.jsx';
-import ManageAcessUser from './pages/admin/ManageAcessUser.jsx';
-import ManageUserInfo from './pages/admin/ManageUserInfo.jsx';
-import ManageClassInfo from './pages/admin/ManageClassInfo.jsx';
-import ManagerRsvModi from './pages/admin/ManagerRsvModi.jsx';
-import ClassInfoModi from './pages/admin/ClassInfoModi.jsx';
+import ClassInfoRegi from './pages/admin/lectures/ClassInfoRegi.jsx';
+import ManageAcessUser from './pages/admin/students/ManageAcessUser.jsx';
+import ManageUserInfo from './pages/admin/students/ManageUserInfo.jsx';
+import ManageClassInfo from './pages/admin/reservations/ManageClassInfo.jsx';
+import ManagerRsvModi from './pages/admin/reservations/ManagerRsvModi.jsx';
+import ClassInfoModi from './pages/admin/lectures/ClassInfoModi.jsx';
 import ReservationEdit from './pages/lecture/ReservationEdit.jsx';
-import ReservationMEdit from './pages/admin/ReservationMEdit.jsx';
-import ReservationMRegi from './pages/admin/ReservationMRegi.jsx';
+import ReservationMEdit from './pages/admin/reservations/ReservationMEdit.jsx';
+import ReservationMRegi from './pages/admin/reservations/ReservationMRegi.jsx';
 import SNSCookie from './pages/auth/SNSCookie.jsx';
-import ReservationEditAdmin from './pages/admin/ReservationEditAdmin.jsx';
+import ReservationEditAdmin from './pages/admin/reservations/ReservationEditAdmin.jsx';
 import SNSsignup from './pages/auth/SNSsignup.jsx';
 import ExistingMemberSignUp from './pages/auth/ExistingMemberSignUp.jsx';
 import ExistingSignup2 from './pages/auth/ExistingSignup2.jsx';
