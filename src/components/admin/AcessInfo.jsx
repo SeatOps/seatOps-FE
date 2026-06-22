@@ -1,15 +1,10 @@
 import rsvInfo from "../../css/admin/RsvInfo.module.css"
+import useModal from "../../hooks/useModal";
 import { authAPI } from '../common/apiClient';
-import TwoBtnModal from "./TwoBtnModal";
+import TwoButtonModal from "../common/TwoButtonModal";
 import { useState } from "react";
 
 function AcessInfo({ userInfo, onSuccess }) {
-
-    const [isModal, setIsModal] = useState(false);
-    const closeModal = () => {
-        setIsModal(false);
-    }
-
     const {
         userId,
         username,
@@ -45,6 +40,9 @@ function AcessInfo({ userInfo, onSuccess }) {
         }
     }
 
+    const modal = useModal(fetchAcessRefusal);
+
+
 
 
     return (
@@ -58,16 +56,13 @@ function AcessInfo({ userInfo, onSuccess }) {
                 <p className={rsvInfo.info_1_8}>{createdAt}</p>
                 <p className={rsvInfo.info_1_2}>{username}</p>
                 <p className={rsvInfo.info_1}>
-                    <button className={rsvInfo.btn} onClick={() => (setIsModal(true))}>승인거절</button>
+                    <button className={rsvInfo.btn} onClick={modal.openModal}>승인거절</button>
                 </p>
                 <div className={rsvInfo.info_1_btn}>
                     <button className={rsvInfo.btn} onClick={() => (fetchAcessUser())}>승인하기</button>
                 </div>
             </div>
-
-            {isModal === true && (
-                <TwoBtnModal text={`${nickname}님의 승인을 거절하시겠습니까?`} btn1T="네" btn2T="아니오" btn1E={fetchAcessRefusal} btn2E={closeModal} />
-            )}
+            <TwoButtonModal isModal={modal.isModal} closeModal={modal.closeModal} activeModal={modal.activeModal} noneActiveModal={modal.noneActiveModal} text={`${nickname}님의 반려하시겠습니까?`} />
         </div>
 
     )

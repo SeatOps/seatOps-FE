@@ -1,4 +1,4 @@
-function InstructorEdit({ instructorList, setInstructor, instructor, instructorInput, clickModal, setInstructorModal, setInstructorInput, modiInstructor, setModiInstructor, fetchModiInstructor }) {
+function InstructorEdit({ instructorList, setInstructor, instructor, instructorInput, instructorModal, setInstructorInput, modiInstructor, setModiInstructor, fetchModiInstructor }) {
     return (
         <div>
             <label>강사</label>
@@ -11,7 +11,7 @@ function InstructorEdit({ instructorList, setInstructor, instructor, instructorI
                     </select>
                     <button
                         className={instructorInput ? classModi.modi_btn : ""}
-                        onClick={() => instructorInput ? clickModal(setInstructorModal) : clickModi(instructorInput, setInstructorInput)}>
+                        onClick={() => instructorInput ? instructorModal.openModal() : clickModi(instructorInput, setInstructorInput)}>
                         {instructorInput ? "삭제하기" : "수정하기"}
                     </button>
                 </div>

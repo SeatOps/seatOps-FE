@@ -1,24 +1,11 @@
 import { useState } from 'react';
 import rsvInfo from "../../css/admin/RsvInfo.module.css"
-import TwoBtnModal from './TwoBtnModal';
 import { authAPI } from '../common/apiClient';
 import { useNavigate } from 'react-router-dom'; // 추가
+import useModal from '../../hooks/useModal';
 
 function ReservationInfo({ reservationData, lectureId, onDelete, isFinished }) {
-    const [isModal, setIsModal] = useState(false);
-    const [onModal, setOnModal] = useState(false);
-
     const navigate = useNavigate(); // 추가
-
-    const clickModal = () => {
-        setIsModal(true)
-    }
-
-    const closeModal = () => {
-        setIsModal(false);
-    }
-
-
 
     const {
         reservationId,
@@ -51,12 +38,16 @@ function ReservationInfo({ reservationData, lectureId, onDelete, isFinished }) {
         try {
             const id = reservationId
             await authAPI.managerLectureUserDelete(id);
-            closeModal();
+            cancleModal.closeModal();
             onDelete(id);
         } catch (err) {
             console.error("취소 실패:", err)
         }
     }
+
+    const cancleModal = useModal(deleteRsvUser);
+    const editModal = useModal(handleChangeSeat);
+
 
     return (
         <div className={rsvInfo.infos}>
@@ -67,21 +58,18 @@ function ReservationInfo({ reservationData, lectureId, onDelete, isFinished }) {
                 <p className={rsvInfo.info_1_7}>{parentPhoneNumber}</p>
                 <p className={rsvInfo.info_1_9}>{reservationAt}</p>
                 <div className={rsvInfo.info_2_1}>
-                    {isFinished ? (<></>) : (<button className={rsvInfo.btn} onClick={() => { setOnModal(true) }}>자리 변경</button>)}
+                    {isFinished ? (<></>) : (<button className={rsvInfo.btn} onClick={editModal.openModal}>자리 변경</button>)}
 
                 </div>
 
                 <div className={rsvInfo.info_1_4}>
-                    {isFinished ? (<></>) : (<button className={rsvInfo.btn} onClick={clickModal}>예약 취소</button>)}
+                    {isFinished ? (<></>) : (<button className={rsvInfo.btn} onClick={cancleModal.openModal}>예약 취소</button>)}
 
                 </div>
             </div>
-            {onModal === true && (
-                <TwoBtnModal text={`${nickname} 님 자리를 변경하시겠습니까?`} btn1T="네" btn2T="아니오" btn1E={handleChangeSeat} btn2E={() => { setOnModal(false) }} />
-            )}
-            {isModal === true && (
-                <TwoBtnModal text={`${nickname} 님 예약을 취소하시겠습니까?`} btn1T="네" btn2T="아니오" btn1E={deleteRsvUser} btn2E={closeModal} />
-            )}
+            <TwoButtonModal isModal={editModal.isModal} closeModal={editModal.closeModal} activeModal={editModal.activeModal} noneActiveModal={editModal.noneActiveModal} text={`${nickname} 님 자리를 변경하시겠습니까?`} />
+            <TwoButtonModal isModal={cancleModal.isModal} closeModal={cancleModal.closeModal} activeModal={cancleModal.activeModal} noneActiveModal={cancleModal.noneActiveModal} text={`${nickname} 님 예약을 취소하시겠습니까?`} />
+
         </div>
     )
 }

@@ -5,11 +5,13 @@ import Modal from "../../../components/common/Modal";
 import { useState, useEffect } from "react";
 import { authAPI } from '../../../components/common/apiClient';
 import classModi from '../../../css/admin/ClassModi.module.css';
-import TwoBtnModal from "../../../components/admin/TwoBtnModal";
 import scroll from "../../../css/common/scroll.module.css";
 import { useLocation } from "react-router-dom";
 import InstructorEdit from "./InstructorEdit";
 import ClassroomEdit from "./ClassroomEdit";
+import ClassNameEdit from "./ClassNameEdit";
+import useModal from "../../../hooks/useModal";
+import TwoButtonModal from "../../../components/common/TwoButtonModal";
 
 function ClassInfoModi() {
     const location = useLocation();
@@ -32,18 +34,6 @@ function ClassInfoModi() {
     const [subjectInput, setSubjectInput] = useState(false);
     const [classroomInput, setClassroomInput] = useState(false);
 
-    const [instructorModal, setInstructorModal] = useState(false);
-    const [classroomModal, setClassroomModal] = useState(false);
-    const [subjectModal, setSubjectModal] = useState(false);
-
-    const [deleteOk, setDeleteOk] = useState(false);
-
-    const [deleteError, setDeleteError] = useState(false)
-    const [modiError, setModiError] = useState(false)
-    const [onModal2, setOnModal2] = useState(false)
-
-
-    const clickModal = (setIsModal) => setIsModal(true);
     const closeModal = (setIsModal) => setIsModal(false);
     const clickModi = (input, setInput) => setInput(!input);
     const [classError, setClassError] = useState(false)
@@ -82,14 +72,14 @@ function ClassInfoModi() {
 
     const fetchModiSubject = async () => {
         if (!modiSubject) {
-            setOnModal2(true);
+            nullModal.openModal();
             return;
         }
 
         try {
             const response = await authAPI.modisubject(subject, { name: modiSubject });
             if (response.status === 200) {
-                setOnModal(true);
+                updateCompModal.openModal();
                 setModiSubject("");
                 setSubjectInput(false);
                 await fetchData();
@@ -97,10 +87,11 @@ function ClassInfoModi() {
         } catch (err) {
             console.error(err);
             if (err.response.data === "해당 과목으로 등록된 예약이 존재하여 수정할 수 없습니다.") {
-                setModiError(true);
+                errorUpdateModal.openModal();
             }
             if (err.response.data.message === "이미 존재하는 과목명입니다.") {
                 setClassError(err.response.data.message);
+                errorClassModal.openModal();
             }
 
         }
@@ -115,7 +106,7 @@ function ClassInfoModi() {
         try {
             const response = await authAPI.modiinstructor(instructor, { name: modiInstructor });
             if (response.status === 200) {
-                setOnModal(true);
+                updateCompModal.openModal();
                 setModiInstructor("");
                 setInstructorInput(false);
                 await fetchData();
@@ -124,17 +115,18 @@ function ClassInfoModi() {
             console.error(err);
             if (err.response.data === "해당 강사가 강의에 등록되어 있어 이름을 수정할 수 없습니다."
             ) {
-                setModiError(true);
+                errorUpdateModal.openModal();
             }
             if (err.response.data.message === "이미 존재하는 강사 이름입니다.") {
                 setClassError(err.response.data.message);
+                errorClassModal.openModal();
             }
         }
     };
 
     const fetchModiClassroom = async () => {
         if (!modiClassroom || !modiSeat) {
-            setOnModal2(true);
+            nullModal();
             return;
         }
 
@@ -145,7 +137,7 @@ function ClassInfoModi() {
         try {
             const response = await authAPI.modiclassroom(classroom, { name: formattedClassroom, totalSeat: modiSeat });
             if (response.status === 200) {
-                setOnModal(true);
+                updateCompModal.openModal();
                 setModiClassroom("");
                 setModiSeat("");
                 setClassroomInput(false);
@@ -154,10 +146,11 @@ function ClassInfoModi() {
         } catch (err) {
             console.error(err);
             if (err.response.data === "해당 강의에 예약이 존재하여 강의실 정보(이름/좌석수)를 수정할 수 없습니다.") {
-                setModiError(true);
+                errorUpdateModal.openModal();
             }
             if (err.response.data.message === "이미 존재하는 강의실 이름입니다.") {
                 setClassError(err.response.data.message);
+                errorClassModal.openModal();
             }
         }
 
@@ -168,15 +161,15 @@ function ClassInfoModi() {
         try {
             await authAPI.deletesubject(subject);
             fetchData();
-            setSubjectModal(false);
-            setDeleteOk(true)
+            subjectModal.closeModal();
+            deleteCompModal.openModal();
 
         } catch (err) {
             console.log(err)
             if (err.response && err.response.status === 400) {
-                setSubjectModal(false);
+                subjectModal.closeModal();
                 if (err.response.data === "해당 과목으로 등록된 예약이 존재하여 삭제할 수 없습니다.") {
-                    setDeleteError(true);
+                    errorDeleteModal.openModal();
                 }
             }
         }
@@ -186,16 +179,16 @@ function ClassInfoModi() {
         try {
             await authAPI.deleteinstructor(instructor);
             fetchData();
-            setInstructorModal(false);
-            setDeleteOk(true)
+            instructorModal.closeModal();
+            deleteCompModal.openModal();
 
         } catch (err) {
             console.log(err)
             if (err.response && err.response.status === 400) {
-                setInstructorModal(false);
+                instructorModal.closeModal();
                 console.log(err.response.data)
                 if (err.response.data === "해당 강사이름이 등록된 강의가 존재하여 삭제할 수 없습니다.") {
-                    setDeleteError(true);
+                    errorDeleteModal.openModal();
                 }
             }
         }
@@ -205,20 +198,28 @@ function ClassInfoModi() {
         try {
             await authAPI.deleteclassroom(classroom);
             fetchData();
-            setClassroomModal(false);
-            setDeleteOk(true);
+            classroomModal.closeModal();
+            deleteCompModal.openModal();
         } catch (err) {
             console.log(err)
             if (err.response && err.response.status === 400) {
-                setClassroomModal(false);
+                classroomModal.closeModal();
                 if (err.response.data === "해당 강의실의 좌석에 예약이 존재하여 삭제할 수 없습니다. 먼저 예약을 취소해주세요.") {
-                    setDeleteError(true);
+                    errorDeleteModal.openModal();
                 }
 
             }
         }
     }
-
+    const updateCompModal = useModal();
+    const instructorModal = useModal(deleteInstructor);
+    const subjectModal = useModal(deleteSubject);
+    const classroomModal = useModal(deleteClassroom);
+    const deleteCompModal = useModal();
+    const errorDeleteModal = useModal();
+    const errorUpdateModal = useModal();
+    const nullModal = useModal();
+    const errorClassModal = useModal();
     return (
         <div className={scroll.scroll}>
             <Header />
@@ -230,44 +231,28 @@ function ClassInfoModi() {
 
                 <section className={classModi.form_ct}>
                     {/* 과목명 섹션 */}
-                    <ClassNameEidt subjectList={subjectList} setSubject={setSubject} subject={subject} subjectInput={subjectInput} setSubjectModal={setSubjectModal} clickModal={clickModal} setSubjectInput={setSubjectInput} modiSubject={modiSubject} setModiSubject={setModiSubject} fetchModiSubject={fetchModiSubject} />
+                    <ClassNameEdit subjectList={subjectList} setSubject={setSubject} subject={subject} subjectInput={subjectInput} subjectModal={subjectModal} setSubjectInput={setSubjectInput} modiSubject={modiSubject} setModiSubject={setModiSubject} fetchModiSubject={fetchModiSubject} />
 
-                    {/* 강사 섹션 */}
-                    <InstructorEdit instructorList={instructorList} setInstructor={setInstructor} instructor={instructor} instructorInput={instructorInput} clickModal={clickModal} setInstructorModal={setInstructorModal} setInstructorInput={setInstructorInput} modiInstructor={modiInstructor} setModiInstructor={setModiInstructor} fetchModiInstructor={fetchModiInstructor} />
+                    {/* 강사 섹션 확인해야됨*/}
+                    <InstructorEdit instructorList={instructorList} setInstructor={setInstructor} instructor={instructor} instructorInput={instructorInput} instructorModal={instructorModal} setInstructorInput={setInstructorInput} modiInstructor={modiInstructor} setModiInstructor={setModiInstructor} fetchModiInstructor={fetchModiInstructor} />
 
                     {/* 강의실 섹션 */}
-                    <ClassroomEdit setClassroom={setClassroom} classroomList={classroomList} classroomInput={classroomInput} setClassroomModal={setClassroomModal} setClassroomInput={setClassroomInput} modiClassroom={modiClassroom} modiSeat={modiSeat} setModiClassroom={setModiClassroom} setModiSeat={setModiSeat} fetchModiClassroom={fetchModiClassroom} clickModal={clickModal} />
+                    <ClassroomEdit classroomModal={classroomModal} setClassroom={setClassroom} classroomList={classroomList} classroomInput={classroomInput} setClassroomInput={setClassroomInput} modiClassroom={modiClassroom} modiSeat={modiSeat} setModiClassroom={setModiClassroom} setModiSeat={setModiSeat} fetchModiClassroom={fetchModiClassroom} />
                 </section>
 
                 {/* 모달 컴포넌트들 */}
-                {onModal && <Modal text='수정이 완료되었습니다.' event={() => setOnModal(false)} />}
-                {instructorModal && <TwoBtnModal text="정말로 삭제하시겠습니까?" btn1T="네" btn2T="아니오"
-                    btn1E={deleteInstructor}
-                    btn2E={() => closeModal(setInstructorModal)} />}
-                {subjectModal && <TwoBtnModal text="정말로 삭제하시겠습니까?" btn1T="네" btn2T="아니오"
-                    btn1E={deleteSubject}
-                    btn2E={() => closeModal(setSubjectModal)} />}
-                {classroomModal && <TwoBtnModal text="정말로 삭제하시겠습니까?" btn1T="네" btn2T="아니오"
-                    btn1E={deleteClassroom}
-                    btn2E={() => closeModal(setClassroomModal)} />}
-                {deleteOk &&
-                    <Modal text="삭제되었습니다." event={() => { setDeleteOk(false) }} />
-                }
+                <Modal isModal={updateCompModal.isModal} closeModal={updateCompModal.closeModal} activeModal={updateCompModal.activeModal} text='수정이 완료되었습니다.' />
+                <TwoButtonModal isModal={instructorModal.isModal} closeModal={instructorModal.closeModal} activeModal={instructorModal.activeModal} noneActiveModal={instructorModal.noneActiveModal} text="정말로 삭제하시겠습니까?" />
+                <TwoButtonModal isModal={subjectModal.isModal} closeModal={subjectModal.closeModal} activeModal={subjectModal.activeModal} noneActiveModal={subjectModal.noneActiveModal} text="정말로 삭제하시겠습니까?" />
+                <TwoButtonModal isModal={classroomModal.isModal} closeModal={classroomModal.closeModal} activeModal={classroomModal.activeModal} noneActiveModal={classroomModal.noneActiveModal} text="정말로 삭제하시겠습니까?" />
 
 
-                {deleteError && <Modal text={"해당 정보로 등록된 강의가 있어\n삭제할 수 없습니다."} event={() => setDeleteError(false)} />}
-                {modiError && <Modal text={"해당 정보로 등록된 강의가 있어\n수정할 수 없습니다."} event={() => setModiError(false)} />}
+                <Modal text="삭제되었습니다." isModal={deleteCompModal.isModal} closeModal={deleteCompModal.closeModal} activeModal={deleteCompModal.activeModal} />
+                <Modal isModal={errorDeleteModal.isModal} closeModal={errorDeleteModal.closeModal} activeModal={errorDeleteModal.activeModal} text={"해당 정보로 등록된 강의가 있어\n삭제할 수 없습니다."} />
+                <Modal isModal={errorUpdateModal.isModal} closeModal={errorUpdateModal.closeModal} activeModal={errorUpdateModal.activeModal} text={"해당 정보로 등록된 강의가 있어\n수정할 수 없습니다."} />
+                <Modal isModal={nullModal.isModal} closeModal={nullModal.closeModal} activeModal={nullModal.activeModal} text='값을 입력해주세요.' />
+                <Modal isModal={errorClassModal.isModal} closeModal={errorClassModal.closeModal} activeModal={errorClassModal.activeModal} text={classError} />
 
-                {
-                    onModal2 === true && (
-                        <Modal text='값을 입력해주세요.' event={() => { setOnModal2(false) }} />
-                    )
-                }
-                {
-                    classError && (
-                        <Modal text={classError} event={() => { setClassError('') }} />
-                    )
-                }
             </section>
         </div>
     );

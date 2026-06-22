@@ -1,4 +1,4 @@
-function ClassNameEidt({ subjectList, setSubject, subject, subjectInput, setSubjectModal, clickModal, setSubjectInput, modiSubject, setModiSubject, fetchModiSubject }) {
+function ClassNameEidt({ subjectList, setSubject, subject, subjectInput, subjectModal, setSubjectInput, modiSubject, setModiSubject, fetchModiSubject }) {
     return (
         <div>
             <label>과목명</label>
@@ -11,7 +11,7 @@ function ClassNameEidt({ subjectList, setSubject, subject, subjectInput, setSubj
                     </select>
                     <button
                         className={subjectInput ? classModi.modi_btn : ""}
-                        onClick={() => subjectInput ? clickModal(setSubjectModal) : clickModi(subjectInput, setSubjectInput)}>
+                        onClick={() => subjectInput ? subjectModal.openModal() : clickModi(subjectInput, setSubjectInput)}>
                         {subjectInput ? "삭제하기" : "수정하기"}
                     </button>
                 </div>
