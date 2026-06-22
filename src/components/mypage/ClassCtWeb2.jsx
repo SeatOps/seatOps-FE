@@ -2,15 +2,15 @@ import Navigation from '../common/Navigate';
 import classC from '../../css/main/ClassCt.module.css';
 import { authAPI } from '../common/apiClient';
 import { useState } from 'react';
-import TwoBtnModal from '../admin/TwoBtnModal';
 import { useDayOfWeek } from '../../hooks/useDayOfWeek';
 import { useNavigate } from 'react-router-dom';
+import useModal from '../../hooks/useModal';
+import TwoButtonModal from '../common/TwoButtonModal';
 
 function ClassCtWeb2({ reservationData, onSuccess }) {
 
     const navigate = useNavigate();
     const { reservationpg } = Navigation();
-    const [isModal, setIsModal] = useState(false);
 
     const {
         lectureId,
@@ -51,17 +51,6 @@ function ClassCtWeb2({ reservationData, onSuccess }) {
     const formatseat = String(seat).padStart(3, '0');
     const end = endTime.slice(11, 16) || "";
 
-
-    const clickModal = () => {
-        setIsModal(true)
-    }
-
-    const closeModal = () => {
-        setIsModal(false);
-    }
-
-
-
     //예약 취소 연동
     const deleteSeat = async () => {
         try {
@@ -69,13 +58,14 @@ function ClassCtWeb2({ reservationData, onSuccess }) {
 
             await authAPI.deleteMySeat(id);
             onSuccess();
-            closeModal();
+            modal.closeModal();
 
         } catch (err) {
             console.error("취소 실패:", err);
         }
     };
 
+    const modal = useModal(deleteSeat);
 
     return (
         <div className={classC.class_ct_web}>
@@ -95,11 +85,10 @@ function ClassCtWeb2({ reservationData, onSuccess }) {
                 >
                     변경하기
                 </button>
-                <button onClick={clickModal}>취소하기</button>
+                <button onClick={modal.openModal}>취소하기</button>
             </div>
-            {isModal === true && (
-                <TwoBtnModal text={"취소하시겠습니까?\n취소 후엔 수업을 다시 예약해야 합니다."} btn1T="네" btn2T="아니오" btn1E={deleteSeat} btn2E={closeModal} />
-            )}
+            <TwoButtonModal isModal={modal.isModal} closeModal={modal.closeModal} activeModal={modal.activeModal} noneActiveModal={modal.noneActiveModal} text={"취소하시겠습니까?\n취소 후엔 수업을 다시 예약해야 합니다."} />
+
         </div>
     );
 }

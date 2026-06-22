@@ -1,4 +1,4 @@
-function ClassroomEdit({ setClassroom, classroomList, classroomInput, setClassroomModal, setClassroomInput, modiClassroom, modiSeat, setModiClassroom, setModiSeat, fetchModiClassroom, clickModal }) {
+function ClassroomEdit({ classroomModal, setClassroom, classroomList, classroomInput, setClassroomInput, modiClassroom, modiSeat, setModiClassroom, setModiSeat, fetchModiClassroom }) {
     return (
         <div>
             <label>강의실</label>
@@ -11,7 +11,7 @@ function ClassroomEdit({ setClassroom, classroomList, classroomInput, setClassro
                     </select>
                     <button
                         className={classroomInput ? classModi.modi_btn : ""}
-                        onClick={() => classroomInput ? clickModal(setClassroomModal) : clickModi(classroomInput, setClassroomInput)}>
+                        onClick={() => classroomInput ? classroomModal.openModal() : clickModi(classroomInput, setClassroomInput)}>
                         {classroomInput ? "삭제하기" : "수정하기"}
                     </button>
                 </div>
